@@ -1,2 +1,6 @@
-# ICDFA-Digital-Forensics-Incident-Response-Labs
-Digital Forensics &amp; Incident Response notes, research and Labs
+#Author  
+**Beatrice Nduta**  
+Digital Forensics and Incident Response  
+International Cybersecurity and Digital Forensics Academy
+ ___
+ 
