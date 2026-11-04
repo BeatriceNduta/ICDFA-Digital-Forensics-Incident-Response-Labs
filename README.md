@@ -142,32 +142,27 @@ Unix time counts seconds from 1970-01-01 and Mac Absolute Time from 2001-01-01. 
 
 
 **Unix epoch conversion with Python**
-
-![Unix epoch conversion with Python](screenshots/17_unix_epoch_python.png)
-
 **Local time compared with UTC**
 
-![Local time compared with UTC](screenshots/18_local_vs_utc.png)
+<img width="617" height="302" alt="014 Unix epoch time conversion" src="https://github.com/user-attachments/assets/5a649b01-db1d-4f73-916b-fa22e6d7aa8e" />
 
 **Unix timestamp 1643643491**
 
-![Unix timestamp 1643643491](screenshots/19_unix_ts_1643643491.png)
+<img width="615" height="71" alt="015 unix conversion" src="https://github.com/user-attachments/assets/6a7a411e-1e89-4a48-88bb-5f351e438970" />
 
 **Unix timestamp 1675008832**
 
-![Unix timestamp 1675008832](screenshots/20_unix_ts_1675008832.png)
+<img width="621" height="63" alt="016 unix conversion" src="https://github.com/user-attachments/assets/995688c5-e3f4-46ae-b432-62a25feee3ed" />
+
 
 **Mac Absolute Time 725846400 with date**
 
-![Mac Absolute Time 725846400 with date](screenshots/21_mac_time_date.png)
-
-**Mac Absolute Time with Python**
-
-![Mac Absolute Time with Python](screenshots/23_mac_time_python.png)
+<img width="598" height="65" alt="017 mac time" src="https://github.com/user-attachments/assets/6e23e3c5-680b-4444-84a9-5d8d28f3b845" />
 
 **Current Unix time converted to UTC**
 
-![Current Unix time converted to UTC](screenshots/22_current_time.png)
+<img width="592" height="91" alt="018 current time unix sec" src="https://github.com/user-attachments/assets/3b7248cb-d212-490e-9475-46b882778a55" />
+
 
 ## Task D: Hashing and the Newline Problem
 
