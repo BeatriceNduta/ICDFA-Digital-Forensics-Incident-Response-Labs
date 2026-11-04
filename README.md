@@ -53,11 +53,11 @@ All manual answers matched the Bash and Python outputs.
 
 **Conversions 1-3: binary to decimal, hex to decimal, decimal to binary**
 
-![Conversions 1-3: binary to decimal, hex to decimal, decimal to binary](screenshots/02_manual_conversions_1-3.jpg)
+<img width="756" height="1796" alt="Manual conversions evidence" src="https://github.com/user-attachments/assets/740c7017-1711-4670-835d-160626138e28" />
 
 **Conversions 4-5: decimal to hex, binary to hex**
 
-![Conversions 4-5: decimal to hex, binary to hex](screenshots/03_manual_conversions_4-5.jpg)
+<img width="2885" height="3257" alt="Coversion Evidence" src="https://github.com/user-attachments/assets/9bccbffb-af9d-4db5-886b-0bb091cbe5cc" />
 
 ### Terminal verification
 
