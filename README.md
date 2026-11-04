@@ -186,19 +186,16 @@ A mismatch caused by a stray newline could wrongly suggest evidence was altered.
 
 **xxd and MD5/SHA-256 for Hello with and without newline**
 
-![xxd and MD5/SHA-256 for Hello with and without newline](screenshots/24_hash_hello.png)
+<img width="648" height="462" alt="019 -n explained" src="https://github.com/user-attachments/assets/2e3c3535-0f15-4795-be19-8811e8a1d41a" />
+
 
 **Name files created with echo and echo -n, compared with xxd**
 
-![Name files created with echo and echo -n, compared with xxd](screenshots/25_name_files_xxd.png)
+<img width="593" height="273" alt="020 File creation for hashing comparison" src="https://github.com/user-attachments/assets/e478de8a-1113-4400-8dc7-a6ddc9ab8db1" />
 
 **MD5 and SHA-256 of the name files**
 
-![MD5 and SHA-256 of the name files](screenshots/26_name_hashes.png)
-
-**Hashing only the visible characters with echo -n**
-
-![Hashing only the visible characters with echo -n](screenshots/27_hash_visible_only.png)
+<img width="591" height="241" alt="021hashing without the newline addition" src="https://github.com/user-attachments/assets/c1c8bc30-bbdc-4dfa-9a06-68429b0a2a54" />
 
 ## Task E: Endianness
 
