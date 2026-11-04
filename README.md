@@ -236,6 +236,10 @@ In forensics, file sizes, sector counts, offsets and timestamps in structures su
 
 <img width="572" height="81" alt="image" src="https://github.com/user-attachments/assets/1bd0513c-11f9-4af6-82cc-84a17690d3de" />
 
+#Binary conversion to Hex
+
+<img width="567" height="75" alt="image" src="https://github.com/user-attachments/assets/92de73db-28b4-4508-97b5-467e497b62a0" />
+
 #Local - UTC conversion 
 
 <img width="587" height="288" alt="Local and UTC time comparison" src="https://github.com/user-attachments/assets/058c6805-f343-46d4-a8f2-daaab6cf45bf" />
