@@ -63,27 +63,29 @@ All manual answers matched the Bash and Python outputs.
 
 **Binary to decimal with shell arithmetic**
 
-![Binary to decimal with shell arithmetic](screenshots/04_binary_to_decimal.png)
+<img width="572" height="72" alt="002 Binary to decimal conversion " src="https://github.com/user-attachments/assets/e38a2078-ba7e-4ee4-a84f-56636db8b76a" />
+
 
 **Hex to decimal with shell arithmetic**
 
-![Hex to decimal with shell arithmetic](screenshots/05_hex_to_decimal.png)
+<img width="575" height="71" alt="003 Hexadecimal to decimal conversion" src="https://github.com/user-attachments/assets/dffcedc5-3a20-46bc-b8bb-d95040d52299" />
 
 **Decimal to binary with bc**
 
-![Decimal to binary with bc](screenshots/06_decimal_to_binary_bc.png)
+<img width="583" height="65" alt="004 Decimal to binary " src="https://github.com/user-attachments/assets/a981484b-9f71-46f7-b3ae-a913b76a5c80" />
 
 **Decimal to hex with printf**
 
-![Decimal to hex with printf](screenshots/07_decimal_to_hex_printf.png)
+<img width="575" height="95" alt="005 Decimal to Hexadecial using Printf" src="https://github.com/user-attachments/assets/07c1d0ad-e0a9-4d61-bf68-ff222febee9d" />
 
 **Binary to hex with printf**
 
-![Binary to hex with printf](screenshots/09_binary_to_hex_printf.png)
+<img width="568" height="72" alt="007 Binary conversion to hex" src="https://github.com/user-attachments/assets/5a8bf9a6-9972-4a83-99e4-7c57eb437884" />
 
 **Python validation of all conversions**
 
-![Python validation of all conversions](screenshots/08_python_validation.png)
+<img width="582" height="205" alt="006 py validation" src="https://github.com/user-attachments/assets/3204ff44-9df8-4626-ae43-efdf55d7c225" />
+
 
 ## Task B: ASCII, UTF-8 and Hex Evidence
 
