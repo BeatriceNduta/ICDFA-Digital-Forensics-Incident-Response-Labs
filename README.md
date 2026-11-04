@@ -22,7 +22,7 @@ This lab builds the skills a digital forensics trainee needs to read raw evidenc
 
 **Working folder created in Kali Linux (VMware), showing student ID in the path**
 
-![Working folder created in Kali Linux (VMware), showing student ID in the path](screenshots/01_working_folder.png)
+<img width="581" height="240" alt="001 Making a Directory" src="https://github.com/user-attachments/assets/e86ad23b-391a-4d44-8244-7473bcaa6316" />
 
 ## Tools Used
 
