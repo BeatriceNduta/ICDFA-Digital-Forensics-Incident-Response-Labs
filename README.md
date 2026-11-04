@@ -120,14 +120,6 @@ EVID-003 and EVID-004 are the most useful for timeline analysis, while EVID-001 
 
 Number systems and timestamps matter because digital evidence is stored as bytes, and every interpretation depends on the correct base, encoding, epoch, time zone and byte order. A small mistake, such as an extra newline, a wrong epoch or reversed bytes, can change a hash, shift a timeline or misstate a value, weakening the reliability of a finding. An examiner must understand and explain the output, not only run the command, and should validate results with more than one tool.
 
-## Repository Contents
-
-```
-.
-├── README.md
-├── CIP-B101_Lab1A_Beatrice_Nduta_Report.pdf
-└── screenshots/        # terminal evidence (optional)
-```
 
 ## References
 
