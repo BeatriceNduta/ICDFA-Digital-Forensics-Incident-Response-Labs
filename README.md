@@ -240,6 +240,14 @@ In forensics, file sizes, sector counts, offsets and timestamps in structures su
 
 <img width="567" height="75" alt="image" src="https://github.com/user-attachments/assets/92de73db-28b4-4508-97b5-467e497b62a0" />
 
+#Unix time enterpretation
+
+<img width="567" height="75" alt="image" src="https://github.com/user-attachments/assets/2e82999e-b0f4-4bd5-b6d1-c1d2f34d5cef" />
+
+ #Mac Absolute Time
+ 
+ <img width="582" height="62" alt="image" src="https://github.com/user-attachments/assets/75631c89-da02-4225-b064-3b457e84c81c" />
+
 #Local - UTC conversion 
 
 <img width="587" height="288" alt="Local and UTC time comparison" src="https://github.com/user-attachments/assets/058c6805-f343-46d4-a8f2-daaab6cf45bf" />
