@@ -4,13 +4,17 @@ Digital Forensics and Incident Response
 International Cybersecurity and Digital Forensics Academy
  ---
 
- # CIP-B101 Lab 1A: Number Systems, ASCII, Timestamps and Data Representation
+ # CIP-B101 Lab 1A: Number Systems, ASCII, Timestamps and Data Representation 
 
-**Course:** CIP-B101 Basic Computer Skills for Digital Forensics
-**Institution:** International Cybersecurity and Digital Forensics Academy (ICDFA)
-**Student:** Beatrice Nduta (ID: 17016)
-**Platform:** Kali Linux (VMware), Bash, Python 3.13
-**Date:** 3 November 2026
+  | Filed | Details |
+  |---|---|  
+  | Student Name | Beatrice Nduta  
+  | Student ID | C11/26/PCDFIR/17016 |
+  | Course Name | Digital Forensics & Incident Response |
+  | Instructor Name |  Aminu Idris, AMCPN |
+  | Date of submission | 03/11/2026
+
+----------------------------------------------------------------------------------------------------
 
 ---
 
