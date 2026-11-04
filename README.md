@@ -208,12 +208,19 @@ The system byte order is **little-endian** (`sys.byteorder`). Little-endian stor
 | `00000100` | 65536 | 256 |
 | `78563412` | 305419896 | 2018915346 |
 
+<img width="577" height="247" alt="023 task six 001 Endianness" src="https://github.com/user-attachments/assets/c75e97c6-0655-4b80-b30e-34da15aeba34" />
+<img width="617" height="193" alt="024 task six 002" src="https://github.com/user-attachments/assets/07506d5c-4fb6-4ab7-a8d5-998c1f1ce15a" />
+<img width="675" height="193" alt="025 task six 003" src="https://github.com/user-attachments/assets/521f7e47-defe-47f1-9ebd-b4e57cda086d" />
+<img width="686" height="197" alt="026 task six 004" src="https://github.com/user-attachments/assets/fc2dacfb-8978-4434-9a26-06f407149b8c" />
+
+
 In forensics, file sizes, sector counts, offsets and timestamps in structures such as NTFS, FAT or memory dumps are stored in a defined byte order. Reading them in the wrong order gives wildly wrong values.
 
 
 **System byte order and little/big-endian interpretation of 78563412**
 
-![System byte order and little/big-endian interpretation of 78563412](screenshots/28_endianness_python.png)
+<img width="727" height="313" alt="022 understanding Endians" src="https://github.com/user-attachments/assets/0f21303b-32ff-4760-8bda-21604f596108" />
+
 
 ## Task F: Mini Forensic Case
 
@@ -224,6 +231,16 @@ In forensics, file sizes, sector counts, offsets and timestamps in structures su
 | EVID-003 | `1675008832` | Sun Jan 29 2023, 16:13:52 UTC | Timeline |
 | EVID-004 | `725846400` (Mac) | 2024-01-02 00:00:00 UTC | Timeline |
 | EVID-005 | `78563412` | LE 305419896, BE 2018915346 | Byte order |
+
+#Hex conversion to ASCII
+
+<img width="572" height="81" alt="image" src="https://github.com/user-attachments/assets/1bd0513c-11f9-4af6-82cc-84a17690d3de" />
+
+#Local - UTC conversion 
+
+<img width="587" height="288" alt="Local and UTC time comparison" src="https://github.com/user-attachments/assets/058c6805-f343-46d4-a8f2-daaab6cf45bf" />
+
+
 
 EVID-003 and EVID-004 are the most useful for timeline analysis, while EVID-001 and EVID-002 are for content interpretation. EVID-005 differs because the same bytes are read in opposite order, so the examiner must know the source format.
 
