@@ -102,31 +102,30 @@ printf "<plain hex>" | xxd -r -p   # hex back to text
 
 **Text evidence viewed with cat, xxd and xxd -p**
 
-![Text evidence viewed with cat, xxd and xxd -p](screenshots/10_xxd_text_evidence.png)
+<img width="595" height="242" alt="008 converting text and hex rep" src="https://github.com/user-attachments/assets/ac9439e9-cb24-41f6-86ea-29062bc2e423" />
 
 **Hex converted back to ASCII**
 
-![Hex converted back to ASCII](screenshots/11_hex_to_ascii_printf.png)
-
-**Python ASCII/hex conversion**
-
-![Python ASCII/hex conversion](screenshots/12_python_ascii_hex.png)
+<img width="583" height="237" alt="009 Text_hex evidence string" src="https://github.com/user-attachments/assets/423a3975-1997-41b0-a5ac-f0e6d35f872d" />
 
 **Creating beatrice_lab1a.txt**
 
-![Creating beatrice_lab1a.txt](screenshots/13_create_name_file.png)
+<img width="567" height="46" alt="010 Creating a file for decoding " src="https://github.com/user-attachments/assets/dd87e4ec-7683-4035-9ac2-d44157f71be4" />
 
 **xxd view of the file**
 
-![xxd view of the file](screenshots/14_xxd_name_file.png)
+<img width="559" height="81" alt="011 using xxd to display file content" src="https://github.com/user-attachments/assets/9efb9fba-3165-4596-98d6-266123e72a78" />
+
 
 **Plain hex with xxd -p**
 
-![Plain hex with xxd -p](screenshots/15_xxd_plain_hex.png)
+<img width="575" height="76" alt="012 extracting the plain text" src="https://github.com/user-attachments/assets/8aef9e2c-d596-4a64-b51f-f300faaa1d14" />
 
 **Plain hex converted back to readable text**
 
-![Plain hex converted back to readable text](screenshots/16_hex_back_to_text.png)
+<img width="601" height="120" alt="013 converts plain hex to text" src="https://github.com/user-attachments/assets/20da7f68-cd60-4bbc-af68-c0562d717c34" />
+
+
 - **Why `0A` appears:** `echo` without `-n` appends a newline byte (`0x0A`). It is invisible as text but it is real data, so `-n` is used when exact content matters.
 - **Not all hex is text:** bytes may represent images, compressed or encrypted data, or binary structures such as timestamps and offsets. The file type and context must be identified before decoding.
 
