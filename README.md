@@ -16,11 +16,13 @@ International Cybersecurity and Digital Forensics Academy
 
 ----------------------------------------------------------------------------------------------------
 
----
-
 ## Overview
 
 This lab builds the skills a digital forensics trainee needs to read raw evidence correctly: number bases, text encodings, timestamps, hashes and byte order. Every value was converted manually, then verified in the terminal using shell arithmetic, `bc`, `printf`, `xxd`, `date` and Python.
+
+**Working folder created in Kali Linux (VMware), showing student ID in the path**
+
+![Working folder created in Kali Linux (VMware), showing student ID in the path](screenshots/01_working_folder.png)
 
 ## Tools Used
 
@@ -47,6 +49,42 @@ Hexadecimal is used in forensics because one byte is exactly two hex digits, whi
 
 All manual answers matched the Bash and Python outputs.
 
+### Manual working (handwritten)
+
+**Conversions 1-3: binary to decimal, hex to decimal, decimal to binary**
+
+![Conversions 1-3: binary to decimal, hex to decimal, decimal to binary](screenshots/02_manual_conversions_1-3.jpg)
+
+**Conversions 4-5: decimal to hex, binary to hex**
+
+![Conversions 4-5: decimal to hex, binary to hex](screenshots/03_manual_conversions_4-5.jpg)
+
+### Terminal verification
+
+**Binary to decimal with shell arithmetic**
+
+![Binary to decimal with shell arithmetic](screenshots/04_binary_to_decimal.png)
+
+**Hex to decimal with shell arithmetic**
+
+![Hex to decimal with shell arithmetic](screenshots/05_hex_to_decimal.png)
+
+**Decimal to binary with bc**
+
+![Decimal to binary with bc](screenshots/06_decimal_to_binary_bc.png)
+
+**Decimal to hex with printf**
+
+![Decimal to hex with printf](screenshots/07_decimal_to_hex_printf.png)
+
+**Binary to hex with printf**
+
+![Binary to hex with printf](screenshots/09_binary_to_hex_printf.png)
+
+**Python validation of all conversions**
+
+![Python validation of all conversions](screenshots/08_python_validation.png)
+
 ## Task B: ASCII, UTF-8 and Hex Evidence
 
 ```bash
@@ -58,6 +96,35 @@ printf "<plain hex>" | xxd -r -p   # hex back to text
 
 - `xxd` output began `4469 6769 7461 6c20`, which is "Digital ".
 - Python confirmed the mapping: `Hello` → `48656c6c6f`, `ord('H') = 72`, `chr(72) = 'H'`.
+
+
+**Text evidence viewed with cat, xxd and xxd -p**
+
+![Text evidence viewed with cat, xxd and xxd -p](screenshots/10_xxd_text_evidence.png)
+
+**Hex converted back to ASCII**
+
+![Hex converted back to ASCII](screenshots/11_hex_to_ascii_printf.png)
+
+**Python ASCII/hex conversion**
+
+![Python ASCII/hex conversion](screenshots/12_python_ascii_hex.png)
+
+**Creating beatrice_lab1a.txt**
+
+![Creating beatrice_lab1a.txt](screenshots/13_create_name_file.png)
+
+**xxd view of the file**
+
+![xxd view of the file](screenshots/14_xxd_name_file.png)
+
+**Plain hex with xxd -p**
+
+![Plain hex with xxd -p](screenshots/15_xxd_plain_hex.png)
+
+**Plain hex converted back to readable text**
+
+![Plain hex converted back to readable text](screenshots/16_hex_back_to_text.png)
 - **Why `0A` appears:** `echo` without `-n` appends a newline byte (`0x0A`). It is invisible as text but it is real data, so `-n` is used when exact content matters.
 - **Not all hex is text:** bytes may represent images, compressed or encrypted data, or binary structures such as timestamps and offsets. The file type and context must be identified before decoding.
 
@@ -71,6 +138,35 @@ printf "<plain hex>" | xxd -r -p   # hex back to text
 | Current time | Unix seconds | `now=$(date +%s); date -u -d @$now` | Tue Nov 3 09:52:57 PM UTC 2026 |
 
 Unix time counts seconds from 1970-01-01 and Mac Absolute Time from 2001-01-01. The offset between them is **978307200 seconds**. Using the wrong epoch, or mixing local time with UTC, can place an event at the wrong time, so every result is labelled UTC.
+
+
+**Unix epoch conversion with Python**
+
+![Unix epoch conversion with Python](screenshots/17_unix_epoch_python.png)
+
+**Local time compared with UTC**
+
+![Local time compared with UTC](screenshots/18_local_vs_utc.png)
+
+**Unix timestamp 1643643491**
+
+![Unix timestamp 1643643491](screenshots/19_unix_ts_1643643491.png)
+
+**Unix timestamp 1675008832**
+
+![Unix timestamp 1675008832](screenshots/20_unix_ts_1675008832.png)
+
+**Mac Absolute Time 725846400 with date**
+
+![Mac Absolute Time 725846400 with date](screenshots/21_mac_time_date.png)
+
+**Mac Absolute Time with Python**
+
+![Mac Absolute Time with Python](screenshots/23_mac_time_python.png)
+
+**Current Unix time converted to UTC**
+
+![Current Unix time converted to UTC](screenshots/22_current_time.png)
 
 ## Task D: Hashing and the Newline Problem
 
@@ -91,6 +187,23 @@ echo -n "beatrice" | sha256sum
 
 A mismatch caused by a stray newline could wrongly suggest evidence was altered.
 
+
+**xxd and MD5/SHA-256 for Hello with and without newline**
+
+![xxd and MD5/SHA-256 for Hello with and without newline](screenshots/24_hash_hello.png)
+
+**Name files created with echo and echo -n, compared with xxd**
+
+![Name files created with echo and echo -n, compared with xxd](screenshots/25_name_files_xxd.png)
+
+**MD5 and SHA-256 of the name files**
+
+![MD5 and SHA-256 of the name files](screenshots/26_name_hashes.png)
+
+**Hashing only the visible characters with echo -n**
+
+![Hashing only the visible characters with echo -n](screenshots/27_hash_visible_only.png)
+
 ## Task E: Endianness
 
 The system byte order is **little-endian** (`sys.byteorder`). Little-endian stores the least significant byte first; big-endian stores the most significant byte first.
@@ -103,6 +216,11 @@ The system byte order is **little-endian** (`sys.byteorder`). Little-endian stor
 | `78563412` | 305419896 | 2018915346 |
 
 In forensics, file sizes, sector counts, offsets and timestamps in structures such as NTFS, FAT or memory dumps are stored in a defined byte order. Reading them in the wrong order gives wildly wrong values.
+
+
+**System byte order and little/big-endian interpretation of 78563412**
+
+![System byte order and little/big-endian interpretation of 78563412](screenshots/28_endianness_python.png)
 
 ## Task F: Mini Forensic Case
 
@@ -120,7 +238,6 @@ EVID-003 and EVID-004 are the most useful for timeline analysis, while EVID-001 
 
 Number systems and timestamps matter because digital evidence is stored as bytes, and every interpretation depends on the correct base, encoding, epoch, time zone and byte order. A small mistake, such as an extra newline, a wrong epoch or reversed bytes, can change a hash, shift a timeline or misstate a value, weakening the reliability of a finding. An examiner must understand and explain the output, not only run the command, and should validate results with more than one tool.
 
-
 ## References
 
 - [Bash Shell Arithmetic](https://www.gnu.org/software/bash/manual/html_node/Shell-Arithmetic.html)
@@ -129,4 +246,3 @@ Number systems and timestamps matter because digital evidence is stored as bytes
 - [Coordinated Universal Time](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)
 - [MD5 of echo vs Python (Stack Overflow)](https://stackoverflow.com/questions/5693360/why-is-an-md5-hash-created-by-python-different-from-one-created-using-echo-and-m)
 - [Migration techniques for different endianness (IAR)](https://www.iar.com/knowledge/learn/programming/migration-techniques-for-different-endianness/)
- 
