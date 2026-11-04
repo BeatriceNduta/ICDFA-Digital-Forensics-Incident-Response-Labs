@@ -1,3 +1,5 @@
+# CIP-B101 Lab 1A: Number Systems, ASCII, Timestamps and Data Representation
+
 # Student Information  
 
   | Filed | Details |
@@ -8,8 +10,6 @@
   | Instructor Name |  Aminu Idris, AMCPN |
   | Date of submission | 03/11/2026
 
-CIP-B101 Lab 1A: Number Systems, ASCII, Timestamps and Data Representation
-
 ----------------------------------------------------------------------------------------------------
 
 Overview
@@ -18,16 +18,17 @@ This lab builds the skills a digital forensics trainee needs to read raw evidenc
 bases, text encodings, timestamps, hashes and byte order. Every value was converted manually, then
 verified in the terminal using shell arithmetic, bc, printf, xxd, date and Python.
 
-Tools Used
+## Tools Used
 
-  Tool                 Purpose
-  -------------------- -------------------------------------
-  bash                  | Shell arithmetic and file creation
-  python3              Conversion and timestamp validation
-  bc                   Decimal to binary conversion
-  xxd                  Hex dump and hex-to-text conversion
-  date                 Unix timestamp conversion
-  md5sum / sha256sum   Hash verification
+| Tool | Purpose |
+| --- | --- |
+| `bash` | Shell arithmetic and file creation |
+| `python3` | Conversion and timestamp validation |
+| `bc` | Decimal to binary conversion |
+| `xxd` | Hex dump and hex-to-text conversion |
+| `date` | Unix timestamp conversion |
+| `md5sum` / `sha256sum` | Hash verification |
+
 
 Task A: Number Systems
 
