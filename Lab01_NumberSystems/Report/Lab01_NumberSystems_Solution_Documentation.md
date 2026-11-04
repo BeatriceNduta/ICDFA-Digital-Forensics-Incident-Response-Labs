@@ -151,12 +151,6 @@ timeline or misstate a value, weakening the reliability of a finding. An examine
 and explain the output, not only run the command, and should validate results with more than one
 tool.
 
-Repository Contents
-
-    .
-    ├── README.md
-    ├── CIP-B101_Lab1A_Beatrice_Nduta_Report.pdf
-    └── screenshots/        # terminal evidence (optional)
 
 References
 
