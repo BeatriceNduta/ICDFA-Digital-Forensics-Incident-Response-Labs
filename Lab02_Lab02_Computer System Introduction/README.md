@@ -1,6 +1,15 @@
 LAB 1B: PC SYSTEM FUNDAMENTALS, DISK SECTORS AND PARTITION ANALYSIS
 -------------------------------------------------------------------
 
+  | Filed | Details |
+  |---|---|  
+  | Student Name | Beatrice Nduta  
+  | Student ID | C11/26/PCDFIR/17016 |
+  | Course Name | Digital Forensics & Incident Response |
+  | Instructor Name | Basiru Aliyu |
+  | Date of submission | 03/11/2026
+
+----------------------------------------------------------------------------------------------------
 Course: CIP-B101 Basic Computer Skills for Digital Forensics
 Institution: International Cybersecurity and Digital Forensics Academy (ICDFA)
 Author: Beatrice Nduta
