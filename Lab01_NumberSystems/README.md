@@ -7,7 +7,7 @@
   | Student Name | Beatrice Nduta  
   | Student ID | C11/26/PCDFIR/17016 |
   | Course Name | Digital Forensics & Incident Response |
-  | Instructor Name |  Aminu Idris, AMCPN |
+  | Instructor Name | Basiru Aliyu |
   | Date of submission | 03/11/2026
 
 ----------------------------------------------------------------------------------------------------
