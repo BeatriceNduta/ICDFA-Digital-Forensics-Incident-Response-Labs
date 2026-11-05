@@ -56,13 +56,15 @@ A read-only practical lab that builds an initial system profile of a computer, t
 
 `msinfo32` shows the OS, system type, processor, memory, **BIOS Mode: UEFI** and Secure Boot State.
 
-![Fig 1: Windows System Information (msinfo32) showing BIOS Mode: UEFI](images/fig01_msinfo32.png)
+<img width="937" height="802" alt="Fig 1  windows sytem information" src="https://github.com/user-attachments/assets/1ff6d3b2-bdef-43eb-8228-2693639c1557" />
+
 
 *Fig 1: Windows System Information (msinfo32) showing BIOS Mode: UEFI*
 
 The first page of the `systeminfo` command output:
 
-![Fig 2: Output of the systeminfo command](images/fig02_systeminfo.png)
+<img width="1217" height="1003" alt="Fig 2 powershell system info output" src="https://github.com/user-attachments/assets/d7536277-9a9e-4904-96c2-775755f2d2fa" />
+
 
 *Fig 2: Output of the systeminfo command*
 
@@ -70,7 +72,8 @@ The first page of the `systeminfo` command output:
 
 `Get-Disk`, `Get-Partition` and `Get-Volume` show the disk model, size, partition style, partitions and file systems.
 
-![Fig 3: Storage model, size, partitions and file systems](images/fig03_storage_output.png)
+<img width="1877" height="670" alt="Fig 3 screenshots of storage model, size, partitions, and file systemspng" src="https://github.com/user-attachments/assets/202aece0-8cab-4023-8553-b351a494f8e2" />
+
 
 *Fig 3: Storage model, size, partitions and file systems (`Get-Disk`, `Get-Partition`, `Get-Volume`)*
 
@@ -94,13 +97,15 @@ The same action often leaves traces in more than one layer, so corroborating acr
 
 Task Manager showing running apps and background processes:
 
-![Fig 4: Task Manager showing running processes](images/fig04_task_manager.png)
+<img width="1069" height="1007" alt="Fig 4 task manager" src="https://github.com/user-attachments/assets/a82c0bce-7293-4ad4-9663-b54e47df6621" />
+
 
 *Fig 4: Task Manager showing running processes*
 
 Three processes selected for analysis:
 
-![Fig 5: Selected processes with PIDs](images/fig05_selected_processes.png)
+<img width="1068" height="1007" alt="Fig 5 task manager" src="https://github.com/user-attachments/assets/a8dc2bee-41a9-42b2-b8e5-c83a467b7e52" />
+
 
 *Fig 5: Selected processes with PIDs*
 
@@ -112,7 +117,7 @@ Three processes selected for analysis:
 
 The same data from PowerShell:
 
-![Fig 6: Running processes listed with PIDs](images/fig06_get_process.png)
+
 
 *Fig 6: Running processes listed with PIDs (`Get-Process`)*
 
@@ -173,7 +178,9 @@ Sectors per track = 400, heads = 12, cylinders = 17,000, bytes per sector = 512.
 
 Partition table evidence for partitions 1 and 2:
 
-![Fig 7: Get-Partition output for partitions 1 and 2](images/fig07_get_partition_p1_p2.png)
+<img width="878" height="489" alt="Fig 8 disk partition" src="https://github.com/user-attachments/assets/c3df79bb-65bb-45f4-8811-874f957ad681" />
+
+
 
 *Fig 7: `Get-Partition | Select-Object DiskNumber, PartitionNumber, Type, Offset, Size`*
 
@@ -204,13 +211,15 @@ Partition table evidence for partitions 1 and 2:
 
 Disk Management shows the disk layout: EFI (100 MB), C: (326.03 GB NTFS), Recovery (1.27 GB) and 149.53 GB unallocated.
 
-![Fig 9: Disk Management showing the disk layout](images/fig09_disk_management.png)
+<img width="931" height="551" alt="Fig 9 Disk management" src="https://github.com/user-attachments/assets/bd1b7c66-c670-48dd-b753-8aebd3967bc6" />
+
 
 *Fig 9: Disk Management showing the disk layout*
 
 DiskPart was used for listing only (`list disk`, `select disk 0`, `list partition`):
 
-![Fig 10: Read-only partition listing in DiskPart](images/fig10_diskpart_listing.png)
+<img width="706" height="561" alt="Fig 10 powershell safe listing " src="https://github.com/user-attachments/assets/a7f40964-3478-4e04-8303-5a080dc6a8f7" />
+
 
 *Fig 10: Read-only partition listing in PowerShell and DiskPart*
 
@@ -224,7 +233,7 @@ blkid
 df -h
 ```
 
-![Fig 11: Read-only inspection of the Kali Linux VM disk](images/fig11_kali_read_only.png)
+<img width="722" height="706" alt="Fig 11 Kali read only inspection" src="https://github.com/user-attachments/assets/7b15c8bc-9eef-4b16-9814-418b8df09af4" />
 
 *Fig 11: Read-only inspection of the Kali Linux VM disk. One 80.1 GB ext4 partition (`/dev/sda1`) on an MBR (msdos) disk with 512-byte sectors.*
 
@@ -268,7 +277,8 @@ df -h
 
 Windows (`Get-Volume`): both the C: volume and the Recovery volume use **NTFS** (Fig 3). Linux (Kali): the root partition `/dev/sda1` uses **ext4**.
 
-![Fig 12: File system identification on the Kali Linux VM](images/fig12_kali_file_systems.png)
+<img width="787" height="298" alt="Fig 12 kali file sys identification" src="https://github.com/user-attachments/assets/0fdb4a16-3ba4-4bf4-b1fc-746f0f0a0858" />
+
 
 *Fig 12: File system identification on the Kali Linux VM (`lsblk -f`, `blkid`, `df -Th`)*
 
@@ -280,7 +290,8 @@ Windows (`Get-Volume`): both the C: volume and the Recovery volume use **NTFS** 
 
 Verification of partitions 1 and 2 using partition table evidence:
 
-![Fig 8: Partition table evidence for partitions 1 and 2](images/fig08_partition_table_evidence.png)
+<img width="878" height="489" alt="Fig 8 disk partition" src="https://github.com/user-attachments/assets/4fa4b7a0-01f4-41fe-93eb-89dca0fc81b5" />
+
 
 *Fig 8: Partition table evidence (`Get-Partition`) for partitions 1 and 2*
 
@@ -304,30 +315,6 @@ The system is a UEFI/GPT Windows 11 machine with four partitions whose sizes wer
 
 ---
 
-## Repository structure
-
-```text
-.
-├── README.md
-├── images/
-│   ├── fig01_msinfo32.png
-│   ├── fig02_systeminfo.png
-│   ├── fig03_storage_output.png
-│   ├── fig04_task_manager.png
-│   ├── fig05_selected_processes.png
-│   ├── fig06_get_process.png
-│   ├── fig07_get_partition_p1_p2.png
-│   ├── fig08_partition_table_evidence.png
-│   ├── fig09_disk_management.png
-│   ├── fig10_diskpart_listing.png
-│   ├── fig11_kali_read_only.png
-│   └── fig12_kali_file_systems.png
-└── report/
-    ├── CIP-B101_Lab_1B_Beatrice_Nduta_Final_Merged.pdf
-    └── Lab_1B_Two_Page_Report_Beatrice_Nduta.pdf
-```
-
----
 
 ## Academic note
 
