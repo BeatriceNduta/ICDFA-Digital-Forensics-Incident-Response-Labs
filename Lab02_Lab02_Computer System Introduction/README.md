@@ -4,6 +4,17 @@
 **Institution:** International Cybersecurity and Digital Forensics Academy (ICDFA)
 **Author:** Beatrice Nduta
 
+  | Filed | Details |
+  |---|---|  
+  | Student Name | Beatrice Nduta  
+  | Student ID | C11/26/PCDFIR/17016 |
+  | Course Name | Digital Forensics & Incident Response |
+  | Instructor Name | Basiru Aliyu |
+  | Date of submission | 03/11/2026
+
+----------------------------------------------------------------------------------------------------
+
+
 A read-only practical lab that builds an initial system profile of a computer, the way a junior digital forensic trainee would before an investigation. It covers system identification, processes, disk sector arithmetic, partition table inspection, the boot process and file system identification.
 
 > **Safety note:** Every command in this lab is read-only. No formatting, partitioning, `dd` writes, `mkfs`, or read-write mounts were performed, so the original state of the evidence was preserved.
