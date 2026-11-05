@@ -1,6 +1,16 @@
 # Lab 1B Report: PC System Fundamentals, Disk Sectors and Partition Analysis
 
-**CIP-B101 Basic Computer Skills for Digital Forensics** | International Cybersecurity and Digital Forensics Academy (ICDFA) | **Student:** Beatrice Nduta
+**CIP-B101 Basic Computer Skills for Digital Forensics** | International Cybersecurity and Digital Forensics Academy (ICDFA) | 
+
+| Filed | Details |
+  |---|---|  
+  | Student Name | Beatrice Nduta  
+  | Student ID | C11/26/PCDFIR/17016 |
+  | Course Name | Digital Forensics & Incident Response |
+  | Instructor Name | Basiru Aliyu |
+  | Date of submission | 03/11/2026
+
+----------------------------------------------------------------------------------------------------
 
 ---
 
