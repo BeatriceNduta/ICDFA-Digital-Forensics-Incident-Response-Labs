@@ -65,7 +65,8 @@ Process data matters in malware analysis and live triage because it shows what t
 
 *\*FAT32 is the standard file system for an EFI System Partition; it was not shown in my `Get-Volume` output.*
 
-![Get-Disk, Get-Partition and Get-Volume output](images/fig3_storage_output.png)
+<img width="1877" height="670" alt="Fig 3 screenshots of storage model, size, partitions, and file systemspng" src="https://github.com/user-attachments/assets/acabf161-f7e5-4061-a219-a3671edf30be" />
+
 
 *Fig 3: Get-Disk, Get-Partition and Get-Volume output (disk 0, GPT, four partitions, NTFS volumes)*
 
