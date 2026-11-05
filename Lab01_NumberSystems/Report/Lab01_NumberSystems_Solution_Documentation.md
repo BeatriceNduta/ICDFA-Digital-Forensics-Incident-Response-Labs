@@ -6,7 +6,6 @@
 | --- | --- | --- | --- |
 | Beatrice Nduta | 17016 | Kali Linux (VMware), Bash and Python 3.13 | 3 November 2026 |
 
-> Report: [`CIP-B101_Lab1A_Beatrice_Nduta_2-Page_Report.pdf`](CIP-B101_Lab1A_Beatrice_Nduta_2-Page_Report.pdf)
 
 ## 1. Objective and Method
 
