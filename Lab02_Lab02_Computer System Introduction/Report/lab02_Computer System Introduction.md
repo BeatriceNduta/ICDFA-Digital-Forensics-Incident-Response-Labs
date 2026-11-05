@@ -2,7 +2,7 @@
 
 **CIP-B101 Basic Computer Skills for Digital Forensics** | International Cybersecurity and Digital Forensics Academy (ICDFA) | 
 
-| Filed | Details |
+  | Filed | Details |
   |---|---|  
   | Student Name | Beatrice Nduta  
   | Student ID | C11/26/PCDFIR/17016 |
