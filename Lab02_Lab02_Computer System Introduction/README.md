@@ -104,7 +104,8 @@ Task Manager showing running apps and background processes:
 
 Three processes selected for analysis:
 
-<img width="1068" height="1007" alt="Fig 5 task manager" src="https://github.com/user-attachments/assets/a8dc2bee-41a9-42b2-b8e5-c83a467b7e52" />
+<img width="802" height="67" alt="Fig 7 capturing three running process" src="https://github.com/user-attachments/assets/1196f2e8-a37e-479c-8ca9-811fdaf98e8a" />
+
 
 
 *Fig 5: Selected processes with PIDs*
