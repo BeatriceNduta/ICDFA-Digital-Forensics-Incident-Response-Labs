@@ -2,9 +2,16 @@
 
 *International Cybersecurity and Digital Forensics Academy (ICDFA) | Basic Computer Skills for Digital Forensics*
 
-| Student | Student ID | Platform | Date |
-| --- | --- | --- | --- |
-| Beatrice Nduta | 17016 | Kali Linux (VMware), Bash and Python 3.13 | 3 November 2026 |
+  | Filed | Details |
+  |---|---|  
+  | Student Name | Beatrice Nduta  
+  | Student ID | C11/26/PCDFIR/17016 |
+  | Course Name | Digital Forensics & Incident Response |
+  | Instructor Name | Basiru Aliyu |
+  | Date of submission | 03/11/2026
+
+----------------------------------------------------------------------------------------------------
+
 
 
 ## 1. Objective and Method
