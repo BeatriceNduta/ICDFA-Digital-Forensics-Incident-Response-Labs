@@ -18,7 +18,8 @@ This lab builds the Linux command-line skills a digital forensics trainee needs 
 
 **Working folder created in Kali Linux (VMware), showing the student name in the path**
 
-<img width="716" alt="Fig 1 Evidence workspace" src="screenshots/fig01_workspace_setup.png" />
+<img width="716" height="317" alt="Fig 1, Making dir and sub folders" src="https://github.com/user-attachments/assets/b9b7e9a3-78c5-4ec2-9e7d-44b4fd11680f" />
+
 
 ## Lab Environment
 
@@ -66,7 +67,8 @@ id
 
 **Operating system and filesystem information**
 
-<img width="800" alt="Fig 2 OS and filesystem information" src="screenshots/fig02_os_filesystem_info.png" />
+<img width="1490" height="801" alt="Fig 2  Os and file system" src="https://github.com/user-attachments/assets/9dbefa20-b569-4098-b12d-b1f839a9df38" />
+
 
 | Directory | Purpose |
 | --- | --- |
@@ -92,7 +94,8 @@ df -i
 
 **Inode, stat, disk space and inode usage**
 
-<img width="851" alt="Fig 3 Inode and disk information" src="screenshots/fig03_inode_disk_info.png" />
+<img width="851" height="608" alt="Fig 3, Inodes and Disk info" src="https://github.com/user-attachments/assets/9a522d5d-6140-4b74-a028-2641b1a9c40d" />
+
 
 | Observation | Value |
 | --- | --- |
@@ -121,7 +124,8 @@ readlink -f lab2a_evidence.txt
 
 **Navigating with absolute and relative paths**
 
-<img width="520" alt="Fig 4 Paths" src="screenshots/fig04_absolute_relative_paths.png" />
+<img width="520" height="252" alt="Fig 4  paths" src="https://github.com/user-attachments/assets/fb4ac437-9f48-410f-8ec2-a99e03849165" />
+
 
 | Path type | Example |
 | --- | --- |
@@ -147,19 +151,23 @@ ls -la evidence
 
 **Confirming the working directory**
 
-<img width="435" alt="Fig 5 Working directory" src="screenshots/fig05_working_directory.png" />
+<img width="435" height="107" alt="Fig 5, file view" src="https://github.com/user-attachments/assets/c68339e4-6f3f-47dc-ba19-91fc201b56f2" />
+
 
 **Creating case notes and viewing them with cat**
 
-<img width="753" alt="Fig 6 Case notes" src="screenshots/fig06_case_notes.png" />
+<img width="753" height="147" alt="fig 6 file creation" src="https://github.com/user-attachments/assets/3b7e33e9-e3b1-4004-9bc6-dd4a708a1acd" />
+
 
 **Copying and renaming files, and backing up notes/ with cp -r**
 
-<img width="522" alt="Fig 7 Copy and rename" src="screenshots/fig07_copy_rename.png" />
+<img width="473" height="222" alt="Fig 7,copy and renaming " src="https://github.com/user-attachments/assets/3fbe671f-a405-4ddd-ad98-147e30c7d8f7" />
+
 
 **Creating and deleting a temporary file**
 
-<img width="541" alt="Fig 8 Temporary file" src="screenshots/fig08_temp_file_delete.png" />
+<img width="541" height="257" alt="Fig 8, temporary file creation and deletion" src="https://github.com/user-attachments/assets/8cb76781-7ccf-44c5-a9c6-250de96a8b48" />
+
 
 ## Task 6: Evidence Search with grep
 
@@ -179,11 +187,13 @@ grep -Ei "192\.168\.56\.[0-9]+" evidence/activity_log.txt
 
 **Creating and viewing the activity log**
 
-<img width="640" alt="Fig 9 Activity log" src="screenshots/fig09_activity_log.png" />
+<img width="640" height="157" alt="Fig 9, file content viewing" src="https://github.com/user-attachments/assets/a55c6094-87ab-4708-8b2b-bc9784515893" />
+
 
 **Searching the log with grep**
 
-<img width="653" alt="Fig 10 grep search" src="screenshots/fig10_grep_search.png" />
+<img width="652" height="327" alt="fig 10, reviwing evidence using grep" src="https://github.com/user-attachments/assets/a8d3f9ce-ac3d-4888-b94f-d814e6b11185" />
+
 
 | Goal | Command | Result |
 | --- | --- | --- |
@@ -203,11 +213,13 @@ find . -type d -name "evidence"
 
 **Directory tree of the workspace**
 
-<img width="663" alt="Fig 11 Directory tree" src="screenshots/fig11_directory_tree.png" />
+<img width="663" height="626" alt="Fig 11, dir teee" src="https://github.com/user-attachments/assets/9639b498-7f79-4943-bf04-9cf6cfebc889" />
+
 
 **Finding files by name pattern**
 
-<img width="497" alt="Fig 12 find command" src="screenshots/fig12_find_command.png" />
+<img width="497" height="362" alt="Fig 12, find files by name pattern" src="https://github.com/user-attachments/assets/5e13d8bc-6fb8-46db-b4e9-6a8498548c58" />
+
 
 `tree` shows the folder hierarchy, and `find` searches by name, type or modification date, so there is no need to open each folder manually.
 
@@ -224,11 +236,13 @@ nmap localhost -p 22,80,443 2>/dev/null || echo "nmap unavailable or no services
 
 **IP configuration and loopback interface**
 
-<img width="827" alt="Fig 13 IP configuration" src="screenshots/fig13_ip_config_loopback.png" />
+<img width="827" height="296" alt="Fig 13, Ip addr network" src="https://github.com/user-attachments/assets/af326131-a275-4541-a2af-4ea7718278d5" />
+
 
 **ping, ss and nmap results for localhost**
 
-<img width="848" alt="Fig 14 ping and nmap" src="screenshots/fig14_ping_nmap_localhost.png" />
+<img width="848" height="785" alt="Fig 14, Networking" src="https://github.com/user-attachments/assets/66dc9bbf-56e4-42b7-9899-a49104985ea7" />
+
 
 | Item | Observation |
 | --- | --- |
@@ -255,7 +269,8 @@ The script saves the date, user, hostname, kernel, current folder, disk space, i
 
 **Script creation, permission change, execution and output**
 
-<img width="900" alt="Fig 15 Script execution" src="screenshots/fig15_script_execution.png" />
+<img width="1062" height="836" alt="Fig 15, Script creation and exe" src="https://github.com/user-attachments/assets/e84c2149-53f9-4e8a-9dfb-382d5d8401af" />
+
 
 ## Task 10: Running the Script from Another Folder with PATH
 
@@ -268,7 +283,8 @@ cat ~/CIP-B101_Lab2A_Beatrice_Nduta/outputs/system_summary.txt | head -n 15
 
 **Script run by name from /tmp (output shows Current Folder: /tmp)**
 
-<img width="903" alt="Fig 16 PATH test" src="screenshots/fig16_path_test_tmp.png" />
+<img width="903" height="403" alt="Fig 16 path" src="https://github.com/user-attachments/assets/d9dd5042-93b0-4eec-9074-1e2df4c2f9d4" />
+
 
 `PATH` is an environment variable listing the directories the shell searches, in order, for executables typed without a path. This is why `ls` (in `/usr/bin`) works from any folder, and why adding `scripts/` to `PATH` let the custom script run by name from `/tmp`. The change applies to the current terminal session only.
 
@@ -283,11 +299,14 @@ ls -lh CIP-B101_Lab2A_Beatrice_Nduta.zip CIP-B101_Lab2A_Beatrice_Nduta.tar.gz
 
 **Creating the .zip archive**
 
-<img width="900" alt="Fig 17 ZIP archive" src="screenshots/fig17_zip_archive.png" />
+<img width="1645" height="785" alt="Fig 17,  ZIP archive" src="https://github.com/user-attachments/assets/b523302e-5e3c-4dba-aaae-1dce0dd2f873" />
+
 
 **Creating the .tar.gz archive**
 
-<img width="900" alt="Fig 18 tar.gz archive" src="screenshots/fig18_targz_archive.png" />
+<img width="1548" height="787" alt="Fig 18 compressd tar archive" src="https://github.com/user-attachments/assets/95c6473b-c61a-48ba-931e-c333794d7401" />
+
+<img width="851" height="90" alt="Fig 19, checksum" src="https://github.com/user-attachments/assets/662a77e8-6fcf-47e8-9343-9586b91c9ca1" />
 
 | Format | Behaviour | Best use |
 | --- | --- | --- |
