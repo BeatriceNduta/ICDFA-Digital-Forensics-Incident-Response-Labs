@@ -19,7 +19,8 @@ This lab builds the Windows command-line habits a trainee digital forensic analy
 
 **Lab workspace and subfolders created in Command Prompt**
 
-<img width="800" alt="Fig 1 Lab workspace created" src="screenshots/fig01_workspace_created.png" />
+<img width="1477" height="627" alt="Fig 1 - making folder   dir" src="https://github.com/user-attachments/assets/ec24bf16-f47f-4690-a3c7-3f2986559917" />
+
 
 ## Lab Environment
 
@@ -77,23 +78,28 @@ tree
 
 **1.1 Current directory**
 
-<img width="800" alt="Fig 2 Current directory" src="screenshots/fig02_current_directory.png" />
+<img width="957" height="150" alt="Fig 2 - current dir display" src="https://github.com/user-attachments/assets/1a9255f8-37b0-4cd4-9967-260f9892e373" />
+
 
 **1.2 Windows root directory**
 
-<img width="600" alt="Fig 3 Windows root" src="screenshots/fig03_windows_root.png" />
+<img width="677" height="442" alt="Fig 3 - disk c dir display" src="https://github.com/user-attachments/assets/8e0a4a56-00ef-4a79-a609-f8d502223724" />
+
 
 **1.3 Users and Public folders**
 
-<img width="700" alt="Fig 4 Users and Public" src="screenshots/fig04_users_public.png" />
+<img width="915" height="913" alt="Fig 4 user display and dir " src="https://github.com/user-attachments/assets/6499a3b0-5a1e-48b3-a409-373121998d3b" />
+
 
 **1.4 Moving back with a relative path**
 
-<img width="600" alt="Fig 5 Relative path" src="screenshots/fig05_relative_path.png" />
+<img width="603" height="201" alt="Fig 5 - paths" src="https://github.com/user-attachments/assets/53da4a82-e794-4db9-980d-2e60e3e8c091" />
+
 
 **1.5 Folder structure with tree**
 
-<img width="700" alt="Fig 6 Tree structure" src="screenshots/fig06_tree_structure.png" />
+<img width="717" height="332" alt="Fig 6 - tree to display structure" src="https://github.com/user-attachments/assets/204a676a-c0a1-4f66-9da9-8dd8269bc5cf" />
+
 
 | Term | Meaning | Example from this lab |
 | --- | --- | --- |
@@ -116,15 +122,18 @@ dir
 
 **Creating my_first_file.txt**
 
-<img width="800" alt="Fig 7 my_first_file" src="screenshots/fig07_my_first_file.png" />
+<img width="1561" height="298" alt="Fig 7 - text file generation" src="https://github.com/user-attachments/assets/6fba85b7-0970-473e-a6fb-a9b9b6296eae" />
+
 
 **Creating evidence_note.txt with > and >>**
 
-<img width="800" alt="Fig 8 evidence_note" src="screenshots/fig08_evidence_note.png" />
+<img width="1152" height="155" alt="Fig 8 - file evidence note" src="https://github.com/user-attachments/assets/9dce293c-75e7-4287-95fa-e0da3c7c7324" />
+
 
 **Listing the workspace folder**
 
-<img width="700" alt="Fig 9 dir workspace" src="screenshots/fig09_dir_workspace.png" />
+<img width="847" height="342" alt="Fig 9 - file dir" src="https://github.com/user-attachments/assets/add9228a-de28-41e4-a35c-58408d8bf65b" />
+
 
 | Operator | Behaviour | How I used it |
 | --- | --- | --- |
@@ -135,31 +144,38 @@ dir
 
 **3.1 Copy a file to another folder** (`copy evidence_note.txt ..\workspace2\evidence_note_copy.txt`)
 
-<img width="800" alt="Fig 10 copy file" src="screenshots/fig10_copy_file.png" />
+<img width="1402" height="381" alt="Fig 10 - File copying" src="https://github.com/user-attachments/assets/aeb96d5f-b7c9-44f2-9a16-688e8a71e333" />
+
 
 **3.2 Back up a whole folder** (`xcopy workspace workspace3\workspace_backup /E /I /H`)
 
-<img width="800" alt="Fig 11 xcopy backup" src="screenshots/fig11_xcopy_backup.png" />
+<img width="1248" height="302" alt="Fig 11 - recursive file copy " src="https://github.com/user-attachments/assets/9e040819-0111-4f47-bb69-8d34129ea5c4" />
+
 
 **3.3 Rename the copied file** (`ren evidence_note_copy.txt renamed_evidence_note.txt`)
 
-<img width="800" alt="Fig 12 rename file" src="screenshots/fig12_rename_file.png" />
+<img width="1362" height="412" alt="Fig 12 - file renaming" src="https://github.com/user-attachments/assets/4b336686-402b-48a1-a15a-93ffc8e31275" />
+
 
 **3.4 Create a temporary test file**
 
-<img width="700" alt="Fig 13 delete test before" src="screenshots/fig13_delete_test_before.png" />
+<img width="1147" height="540" alt="Fig 13 - temp file creation" src="https://github.com/user-attachments/assets/38e93d94-947a-47aa-8d23-f79f7d354cb2" />
+
 
 **3.4 After `del delete_me.txt`**
 
-<img width="700" alt="Fig 14 delete test after" src="screenshots/fig14_delete_test_after.png" />
+<img width="803" height="480" alt="Fig 14 - file deletion" src="https://github.com/user-attachments/assets/02370eda-5358-4c13-86f6-6fb9f2e8e21f" />
+
 
 **3.5 Create an empty folder**
 
-<img width="700" alt="Fig 15 mkdir empty folder" src="screenshots/fig15_mkdir_empty_folder.png" />
+<img width="920" height="502" alt="Fig 15 - Empty folder deletion" src="https://github.com/user-attachments/assets/5d49b6d5-b8a8-4718-a3d6-5db4ac3158c9" />
+
 
 **3.5 After `rmdir empty_test_folder`**
 
-<img width="700" alt="Fig 16 rmdir empty folder" src="screenshots/fig16_rmdir_empty_folder.png" />
+<img width="868" height="477" alt="Fig 16 - Folder deletion" src="https://github.com/user-attachments/assets/487ab031-0905-46f5-9e54-dbc036b67a5f" />
+
 
 Each step was verified with `dir` or `tree` before and after. Only the temporary test file and the empty test folder were removed, and the evidence folders were left intact.
 
@@ -174,11 +190,13 @@ vol C:
 
 **PATH variable and the location of Notepad**
 
-<img width="900" alt="Fig 17 PATH and where notepad" src="screenshots/fig17_path_where_notepad.png" />
+<img width="1897" height="625" alt="Fig 17 - Notepad path " src="https://github.com/user-attachments/assets/727228e1-a421-4db3-a607-ea845bc35b5f" />
+
 
 **Drive information with vol C:**
 
-<img width="600" alt="Fig 18 vol C" src="screenshots/fig18_vol_c.png" />
+<img width="657" height="78" alt="Fig 18 - cVOL " src="https://github.com/user-attachments/assets/540c6e48-eeba-46c8-8c78-9325ab214fe3" />
+
 
 **Why PATH matters in forensics:** Windows searches the PATH folders, in order, when a command name is typed. If a malicious program is placed in a PATH folder, or a PATH entry is altered, it can run in place of a trusted tool. Reviewing PATH is therefore part of malware triage and system review.
 
@@ -194,7 +212,8 @@ systeminfo | find "Total Physical Memory"
 
 **OS, system type, memory, CPU and disk information**
 
-<img width="800" alt="Fig 19 System information" src="screenshots/fig19_system_info.png" />
+<img width="975" height="335" alt="Fig 19 - sys info" src="https://github.com/user-attachments/assets/e0d897ec-7dc7-45f5-910d-da13516692bf" />
+
 
 | Item | Finding |
 | --- | --- |
@@ -220,7 +239,8 @@ ping google.com
 
 **IPv4 address, gateway, MAC address and ping results**
 
-<img width="900" alt="Fig 20 Network information" src="screenshots/fig20_network_info.png" />
+<img width="1057" height="617" alt="fig 20 - Network info and connectivity test" src="https://github.com/user-attachments/assets/b5c3652e-6dae-4492-8770-b74cac26b084" />
+
 
 - `ipconfig /all` was saved to `ipconfig_all.txt`, and `ipconfig | findstr` returned the IPv4 addresses and default gateway.
 - The loopback ping to `127.0.0.1` succeeded with 0% loss, confirming the TCP/IP stack is working.
@@ -242,7 +262,8 @@ findstr /n /i "ip" mini_case_log.txt
 
 **Creating mini_case_log.txt and searching it with findstr**
 
-<img width="900" alt="Fig 21 findstr search" src="screenshots/fig21_findstr_search.png" />
+<img width="1013" height="657" alt="Fig 21 - suspecious login" src="https://github.com/user-attachments/assets/d3ca51c9-d782-437a-aed6-561bdfeb8f55" />
+
 
 | Switch | Function |
 | --- | --- |
@@ -258,7 +279,8 @@ icacls mini_case_log.txt
 
 **Ownership and permission output**
 
-<img width="800" alt="Fig 22 icacls permissions" src="screenshots/fig22_icacls_permissions.png" />
+<img width="801" height="403" alt="Fig 22 - dir info and ownership" src="https://github.com/user-attachments/assets/a4cec332-1415-445b-bb21-764e6d573d46" />
+
 
 - `icacls` shows that the `BUILTIN\Administrators` group has Full control (`F`) of `mini_case_log.txt`.
 - The `(I)` flag means the permission is inherited from the parent `evidence` folder rather than set on the file itself.
@@ -268,7 +290,8 @@ icacls mini_case_log.txt
 
 **Process listing and browser process search**
 
-<img width="900" alt="Fig 23 Process list" src="screenshots/fig23_process_list.png" />
+<img width="1346" height="672" alt="Fig 23 - running services" src="https://github.com/user-attachments/assets/c5e52ca5-6d00-4270-a4cc-904156f0ebc8" />
+
 
 > **Failed command:** `wmic process list brief` returned "'wmic' is not recognized", so no `process_list.txt` was produced by that command. I replaced it with the built-in `tasklist` command, for example:
 >
@@ -292,7 +315,8 @@ PAUSE
 
 **Running hello_world.bat**
 
-<img width="600" alt="Fig 24 hello_world.bat" src="screenshots/fig24_hello_world_bat.png" />
+<img width="700" height="177" alt="Fig 24 - exe batch" src="https://github.com/user-attachments/assets/b50ab66a-32df-4e12-bba1-4a05b9915599" />
+
 
 My first attempt typed the lines directly into Command Prompt instead of saving them in a file. I corrected this by creating the file with Notepad and running `hello_world.bat`.
 
@@ -316,15 +340,21 @@ In the original script the three `wmic` lines failed, so I replaced them with Po
 
 **Launching sys_info.bat**
 
-<img width="600" alt="Fig 25 sys_info.bat run 1" src="screenshots/fig25_sys_info_bat_run_1.png" />
+<img width="700" height="177" alt="Fig 24 - exe batch" src="https://github.com/user-attachments/assets/1eb96d41-5250-4317-bb20-40ec066bebf3" />
+
+
 
 **sys_info.bat execution**
 
-<img width="900" alt="Fig 26 sys_info.bat run 2" src="screenshots/fig26_sys_info_bat_run_2.png" />
+<img width="1856" height="967" alt="Fig 25 - bat execution" src="https://github.com/user-attachments/assets/6e878dfb-1610-46c7-bf49-ecaad7d781dc" />
+
+
 
 **Generated sys_info_report.txt**
 
-<img width="800" alt="Fig 27 sys_info_report" src="screenshots/fig27_sys_info_report.png" />
+<img width="911" height="682" alt="Fig 26 - sys info using script" src="https://github.com/user-attachments/assets/4ecda1ae-5c2d-4c5f-bc4b-3050e64ec0e0" />
+
+
 
 ## Task 11: Making sys_info.bat Callable from Any Folder
 
@@ -336,7 +366,9 @@ dir workspace4
 
 **Copying sys_info.bat into workspace4**
 
-<img width="800" alt="Fig 28 copy to workspace4" src="screenshots/fig28_copy_to_workspace4.png" />
+<img width="1050" height="390" alt="image" src="https://github.com/user-attachments/assets/e31dc0ff-1ee0-42b6-817d-73bb4599190f" />
+
+
 
 ```bat
 set PATH=%PATH%;C:\Users\Public\CIP-B101_Lab1C_Beatrice_Nduta\workspace4
@@ -346,7 +378,8 @@ sys_info.bat
 
 **Running sys_info.bat from C:\ after the PATH update**
 
-<img width="491" alt="Fig 29 PATH run from root" src="screenshots/fig29_path_run_from_root.png" />
+<img width="491" height="82" alt="Fig 28 - callable file" src="https://github.com/user-attachments/assets/687c9b90-9b35-4b71-af02-d75e244d4826" />
+
 
 - **PATH method used: temporary (Option A).** `set PATH=...` applies to the current Command Prompt window only and disappears when it is closed. I did not use `setx`, so no permanent change was made.
 - **Proof:** from `C:\`, Windows located `sys_info.bat` through PATH, and the script ran from outside its own folder.
