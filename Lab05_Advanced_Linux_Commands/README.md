@@ -79,7 +79,8 @@ MD5 for `evidence_note.txt` also matched on both machines: `e202487e8bc830238b35
 
 **Fig 6. dd test image created (5.0 MiB) and hashed on Linux**
 
-<img width="1010" height="765" alt="Fig 21  dd block size test" src="https://github.com/user-attachments/assets/a7d1ae48-3dca-4ee7-be85-dd3b2fd1ecca" />
+<img width="777" height="320" alt="image" src="https://github.com/user-attachments/assets/f0e44144-3382-4421-ae99-733ab86295bb" />
+
 
 
 ## 6. Findings
