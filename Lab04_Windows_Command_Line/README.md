@@ -41,19 +41,23 @@ Microsoft Windows 11 Pro (build 26200, x64-based PC), Intel Core i7-1255U, about
 
 **Fig 1. Lab workspace and subfolders created**
 
-<img width="600" alt="Fig 1 Workspace" src="screenshots/fig01_workspace_created.png" />
+<img width="1477" height="627" alt="Fig 1 - making folder   dir" src="https://github.com/user-attachments/assets/3927d547-0dc6-407e-8d74-871167f24328" />
+
 
 **Fig 21. `findstr` search results from `mini_case_log.txt`**
 
-<img width="600" alt="Fig 21 findstr" src="screenshots/fig21_findstr_search.png" />
+<img width="1013" height="657" alt="Fig 21 - txt evidence search" src="https://github.com/user-attachments/assets/376e497f-021d-4955-bd71-c6597322af18" />
+
 
 **Fig 27. Generated `sys_info_report.txt`**
 
-<img width="500" alt="Fig 27 sys_info report" src="screenshots/fig27_sys_info_report.png" />
+<img width="876" height="281" alt="Fig 27 - New folder creation for script" src="https://github.com/user-attachments/assets/923b2442-5a7c-45bf-add0-cdbdaf7fdf21" />
+
 
 **Fig 29. `sys_info.bat` run from `C:\` after the PATH update**
 
-<img width="400" alt="Fig 29 PATH run" src="screenshots/fig29_path_run_from_root.png" />
+<img width="491" height="82" alt="Fig 28 - callable file" src="https://github.com/user-attachments/assets/b9425d23-dedb-447c-afcf-2f7a05765681" />
+
 
 *All 29 screenshots are in the `screenshots/` folder of the lab repository.*
 
