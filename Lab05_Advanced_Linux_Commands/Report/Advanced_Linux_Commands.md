@@ -21,7 +21,8 @@ This lab practises safe command-line evidence handling between two authorised ma
 
 **Evidence folder structure created in Kali Linux (VMware)**
 
-<img width="800" alt="Fig 1 Folder structure" src="screenshots/fig01_folder_structure.png" />
+<img width="851" height="316" alt="Fig 1 dir making" src="https://github.com/user-attachments/assets/2d981177-05f1-4632-8671-829132a9948f" />
+
 
 ## Lab Environment
 
@@ -77,7 +78,8 @@ ls -l evidence_note.txt
 
 **evidence_note.txt created, displayed and listed**
 
-<img width="800" alt="Fig 2 evidence_note" src="screenshots/fig02_evidence_note.png" />
+<img width="852" height="285" alt="Fig 2 txt file for evidence" src="https://github.com/user-attachments/assets/8e0c46cc-3a62-4583-a485-238fd16f36ad" />
+
 
 The file is 73 bytes with permissions `-rw-rw-r--`: the owner and group can read and write, and other users can only read.
 
@@ -90,7 +92,8 @@ cat logs/evidence_listing_stdout.txt
 
 **Standard output redirected into logs/evidence_listing_stdout.txt**
 
-<img width="500" alt="Fig 3 stdout redirect" src="screenshots/fig03_stdout_redirect.png" />
+<img width="477" height="252" alt="Fig 3 stadard output redirecting" src="https://github.com/user-attachments/assets/2ffa202e-f6fc-4e3e-b872-3dbda8a22b3e" />
+
 
 The `>` symbol redirects standard output into a file, creating a permanent, accurate record of the command's output that can be reviewed, submitted and hashed later to show it has not been altered.
 
@@ -103,7 +106,8 @@ cat logs/error_stderr.txt
 
 **Standard error redirected into logs/error_stderr.txt**
 
-<img width="600" alt="Fig 4 stderr redirect" src="screenshots/fig04_stderr_redirect.png" />
+<img width="587" height="182" alt="Fig 4 stadard error redirecting" src="https://github.com/user-attachments/assets/fec762a8-0da9-4d66-a192-1e92f115682e" />
+
 
 The `2>` operator sends file descriptor 2 to a file, so the "No such file or directory" message is kept as separate, reviewable evidence apart from normal output.
 
@@ -116,7 +120,8 @@ cat logs/combined_output.txt
 
 **Standard output and standard error combined into one log file**
 
-<img width="800" alt="Fig 5 combined output" src="screenshots/fig05_combined_output.png" />
+<img width="780" height="178" alt="Fig 5 stdout and stderr combined" src="https://github.com/user-attachments/assets/21446c53-5e67-45d0-be6f-f3a2848399c5" />
+
 
 In `> logs/combined_output.txt 2>&1`, the `2>&1` part tells the shell to send stderr to the same place stdout is currently going. The file listing and the error message were both captured, in the order they occurred.
 
@@ -133,7 +138,8 @@ which nc || which ncat || echo "netcat or ncat not found" | tee logs/netcat_chec
 
 **Linux network details recorded with tee**
 
-<img width="800" alt="Fig 6 Linux network details" src="screenshots/fig06_linux_network_details.png" />
+<img width="816" height="428" alt="Fig 6 Network details" src="https://github.com/user-attachments/assets/5b846e45-bacf-4f81-a1f7-d5e34578781e" />
+
 
 `tee` displays the output and saves a copy in the logs folder at the same time. The Linux host is `kali`, its `eth0` address is `192.168.146.128/24` with default gateway `192.168.146.2`, and netcat is installed at `/usr/bin/nc`.
 
@@ -147,11 +153,13 @@ where ncat
 
 **Windows network details from ipconfig (address partly redacted for privacy)**
 
-<img width="800" alt="Fig 7 Windows ipconfig" src="screenshots/fig07_windows_ipconfig.png" />
+<img width="830" height="295" alt="Fig 7 windows ip configs" src="https://github.com/user-attachments/assets/12b1d8bc-adc5-45ea-8abf-dfd6cc6b48c8" />
+
 
 **Confirmation that ncat is installed on Windows**
 
-<img width="400" alt="Fig 8 ncat installed" src="screenshots/fig08_ncat_installed_windows.png" />
+<img width="392" height="70" alt="Fig 8 where ncat" src="https://github.com/user-attachments/assets/29f05860-b1e4-4acd-9090-c5d3019dcf7b" />
+
 
 `where ncat` shows `ncat.exe` at `C:\Program Files (x86)\Nmap\ncat.exe`, so Windows can send and receive files with `ncat`.
 
@@ -163,11 +171,13 @@ ping -c 4 WINDOWS_IP | tee logs/ping_windows.txt
 
 **Ping from Linux to the Windows machine**
 
-<img width="700" alt="Fig 9 Ping Linux to Windows" src="screenshots/fig09_ping_linux_to_windows.png" />
+<img width="672" height="223" alt="Fig 9 win ping results" src="https://github.com/user-attachments/assets/018b1b59-dd87-411a-a079-fe87f41d4568" />
+
 
 **Ping from Windows to the Linux machine**
 
-<img width="600" alt="Fig 10 Ping Windows to Linux" src="screenshots/fig10_ping_windows_to_linux.png" />
+<img width="541" height="261" alt="Fig 10 linux results" src="https://github.com/user-attachments/assets/d89df28b-42ab-456e-ab30-63e118ad3cc9" />
+
 
 | Direction | Result | TTL |
 | --- | --- | --- |
@@ -189,7 +199,8 @@ cat ../hashes/source_evidence_note_sha256.txt
 
 **SHA-256 and MD5 hashes of the source file, recorded before transfer**
 
-<img width="800" alt="Fig 11 Source hashes" src="screenshots/fig11_source_hashes.png" />
+<img width="701" height="247" alt="Fig 11 hashing" src="https://github.com/user-attachments/assets/d2cbfecc-0988-4259-85b6-5753be1f1c17" />
+
 
 | Hash | Value |
 | --- | --- |
@@ -208,7 +219,8 @@ cd C:\CIP-B101_Lab2B_Received
 ncat -l -p 9090 > received_evidence_note.txt
 ```
 
-<img width="700" alt="Fig 12 Windows listener" src="screenshots/fig12_windows_listener_9090.png" />
+<img width="636" height="261" alt="Fig 12 listener on win" src="https://github.com/user-attachments/assets/0f37331d-83ad-4873-a034-4ada669160a7" />
+
 
 *Figure 12: Listener started on Windows, port 9090. The "ls is not recognized" message is expected because `ls` is a Linux command; `dir` is the Windows equivalent.*
 
@@ -219,7 +231,8 @@ cd ~/CIP-B101_Lab2B_Beatrice_Nduta/evidence
 ncat WINDOWS_IP 9090 < evidence_note.txt
 ```
 
-<img width="531" alt="Fig 13 Linux sends file" src="screenshots/fig13_linux_sends_file.png" />
+<img width="531" height="130" alt="Fig 13 Linux file ncat file sharing" src="https://github.com/user-attachments/assets/65bb3cd1-c1d3-4e0b-9743-650cc6dfcc0f" />
+
 
 *Figure 13: Linux sending `evidence_note.txt` to the Windows listener. The command finished without error, showing the connection and send completed.*
 
@@ -231,7 +244,7 @@ certutil -hashfile received_evidence_note.txt MD5
 type received_evidence_note.txt
 ```
 
-<img width="800" alt="Fig 14 Windows hash verification" src="screenshots/fig14_windows_hash_verification.png" />
+<img width="800" height="267" alt="Fig 14 file verification using hash" src="https://github.com/user-attachments/assets/a8dfc6c3-3ad8-4fd5-826e-1861b6d14393" />
 
 *Figure 14: Windows verification of the received file using `certutil`. Both hashes are identical to the Linux source hashes in Figure 11, so the file arrived complete and unaltered.*
 
@@ -246,7 +259,8 @@ type BeatriceNdutaEvidence.txt
 certutil -hashfile BeatriceNdutaEvidence.txt SHA256
 ```
 
-<img width="657" alt="Fig 15 Windows evidence file" src="screenshots/fig15_windows_evidence_file.png" />
+<img width="657" height="162" alt="Fig 15 win evidence file for linux transfer" src="https://github.com/user-attachments/assets/ec15c83f-f355-4484-a3f7-2cc3e2e641eb" />
+
 
 *Figure 15: Evidence file created on Windows and hashed before sending. Source SHA-256: `176c99f7ccb4c0d4da5a8838e6f23e45e8abf6a11f4b3ca67e94e450bdddb0e5`.*
 
@@ -257,7 +271,8 @@ cd ~/CIP-B101_Lab2B_Beatrice_Nduta/received
 ncat -l -p 9091 > BeatriceNdutaEvidence_received.txt
 ```
 
-<img width="655" alt="Fig 16 Linux listener" src="screenshots/fig16_linux_listener_9091.png" />
+<img width="655" height="96" alt="Fig 16 linux listener" src="https://github.com/user-attachments/assets/d790fddb-26fa-43c0-a987-46b7bc13503d" />
+
 
 *Figure 16: Listener started on Linux, port 9091. The terminal waits until the sender connects.*
 
@@ -267,7 +282,8 @@ ncat -l -p 9091 > BeatriceNdutaEvidence_received.txt
 ncat 192.168.146.128 9091 < BeatriceNdutaEvidence.txt
 ```
 
-<img width="688" alt="Fig 17 Windows sends file" src="screenshots/fig17_windows_sends_file.png" />
+<img width="688" height="86" alt="Fig 17 sending from win to linux" src="https://github.com/user-attachments/assets/9385397a-d8b6-440b-a449-e588420c5201" />
+
 
 *Figure 17: Windows sending the evidence file to the Linux listener. The prompt returned with no error, indicating the send completed.*
 
@@ -278,7 +294,8 @@ cat BeatriceNdutaEvidence_received.txt
 sha256sum BeatriceNdutaEvidence_received.txt | tee ../hashes/received_windows_file_sha256.txt
 ```
 
-<img width="722" alt="Fig 18 Linux hash verification" src="screenshots/fig18_linux_hash_verification.png" />
+<img width="722" height="128" alt="Fig 18 linux file hash verification" src="https://github.com/user-attachments/assets/ded5bb66-61c7-4775-b3ff-8624b695bdad" />
+
 
 *Figure 18: Linux verification of the file received from Windows. The SHA-256 equals the Windows source hash in Figure 15, so the transfer preserved the file exactly.*
 
@@ -296,7 +313,8 @@ ls -lh test_evidence_image.dd
 sha256sum test_evidence_image.dd | tee ../hashes/source_test_image_sha256.txt
 ```
 
-<img width="777" alt="Fig 19 dd test image" src="screenshots/fig19_dd_test_image.png" />
+<img width="777" height="320" alt="Fig 19 image transfer using dd" src="https://github.com/user-attachments/assets/8061d7b2-7529-4441-a885-3bfcc7b8ff6d" />
+
 
 *Figure 19: Test evidence image created and hashed on Linux. The first `dd` created a 5 MiB (5,242,880 byte) file of zeros. The second wrote a 44-byte marker at offset 1024 without truncating the file (`seek=1024`, `conv=notrunc`).*
 
@@ -320,7 +338,8 @@ nc WINDOWS_IP 9092 < test_evidence_image.dd
 certutil -hashfile test_evidence_image_received.dd SHA256
 ```
 
-<img width="900" alt="Fig 20 Windows image hash" src="screenshots/fig20_windows_image_hash.png" />
+<img width="1055" height="367" alt="Fig 20 win hashing" src="https://github.com/user-attachments/assets/bf2f1ea7-b797-4468-a4c6-64c3d39fb577" />
+
 
 *Figure 20: Windows hash of the received test image. It is identical to the Linux source hash in Figure 19, so the image transfer was forensically reliable. The listener command appears more than once because it was re-entered.*
 
@@ -345,7 +364,8 @@ chmod +x dd_obs_test.sh
 ./dd_obs_test.sh | tee dd_block_size_test_result.txt
 ```
 
-<img width="900" alt="Fig 21 dd block size test" src="screenshots/fig21_dd_block_size_test.png" />
+<img width="1010" height="765" alt="Fig 21  dd block size test" src="https://github.com/user-attachments/assets/834b3466-ece8-4976-a1dd-2f0e0e1f6abf" />
+
 
 *Figure 21: dd block size test results.*
 
