@@ -53,27 +53,34 @@ MD5 for `evidence_note.txt` also matched on both machines: `e202487e8bc830238b35
 
 **Fig 1. Linux network details: `eth0` 192.168.146.128, ncat found at `/usr/bin/nc`**
 
-<img width="700" alt="Fig 1 Linux network details" src="screenshots/fig01_linux_network_details.png" />
+<img width="816" height="428" alt="image" src="https://github.com/user-attachments/assets/ede5e422-c93d-4ed9-a072-51e4adc4b011" />
+
 
 **Fig 2. Source SHA-256 and MD5 hashes recorded before transfer**
 
-<img width="700" alt="Fig 2 Source hashes" src="screenshots/fig02_source_hashes.png" />
+<img width="701" height="247" alt="image" src="https://github.com/user-attachments/assets/588cc9c1-3025-4a92-9afc-bca024e13c0e" />
+
 
 **Fig 3. Windows verification: SHA-256 and MD5 match the Linux source**
 
-<img width="700" alt="Fig 3 Windows verification" src="screenshots/fig03_windows_verification.png" />
+<img width="800" height="267" alt="image" src="https://github.com/user-attachments/assets/2ce72aa3-adfc-4b65-8a57-e9fc98055371" />
+
 
 **Fig 4. Windows hash of the received dd image matches the Linux source hash**
 
-<img width="800" alt="Fig 4 Windows image hash" src="screenshots/fig04_windows_image_hash.png" />
+<img width="988" height="344" alt="image" src="https://github.com/user-attachments/assets/2ccd81d8-9f56-454d-8d83-9bbc04e6941d" />
+
 
 **Fig 5. Linux received the Windows file; SHA-256 recorded and matched**
 
-<img width="722" alt="Fig 5 Linux received Windows file" src="screenshots/fig05_linux_received_windows_file.png" />
+<img width="722" height="128" alt="image" src="https://github.com/user-attachments/assets/22a64b02-2953-490c-afeb-b309707b54ba" />
+
+
 
 **Fig 6. dd test image created (5.0 MiB) and hashed on Linux**
 
-<img width="777" alt="Fig 6 dd test image" src="screenshots/fig06_dd_test_image.png" />
+<img width="1010" height="765" alt="Fig 21  dd block size test" src="https://github.com/user-attachments/assets/a7d1ae48-3dca-4ee7-be85-dd3b2fd1ecca" />
+
 
 ## 6. Findings
 
