@@ -79,7 +79,8 @@ I created the case `CIP-B102-Lab1-Beatrice_Nduta` (22 Nov 2026, 18:26 EAT), adde
 
 *Figure 3: Exported Office files and their SHA-256 hashes (PowerShell).*
 
-![Figure 4: Autopsy HTML report](screenshots/fig25_autopsy_html_report.png)
+<img width="1675" height="970" alt="Fig 25 Autopsy report" src="https://github.com/user-attachments/assets/554280a7-1145-4604-8b4b-6dc49c1af2e1" />
+
 
 *Figure 4: Autopsy HTML report: 44 keyword hits, tagged files.*
 
@@ -95,11 +96,13 @@ I created the case `CIP-B102-Lab1-Beatrice_Nduta` (22 Nov 2026, 18:26 EAT), adde
 
 Hits were tagged as **Keyword Hit - Finding** (supports a finding) or **Keyword Hit - Lead** (needs follow-up). The carved fragment has no filename, path or timestamps, so it supports the content of the letter but not its origin or timing.
 
-![Figure 5: Keyword search for George](screenshots/fig22_keyword_george.png)
+<img width="1352" height="682" alt="Fig 22 Keyword search George" src="https://github.com/user-attachments/assets/cd50003f-92bb-436d-8539-0f32f941cf3d" />
+
 
 *Figure 5: Keyword search for "George": 9 results across files and unallocated space.*
 
-![Figure 6: Keyword search for domain](screenshots/fig23_keyword_domain.png)
+<img width="1340" height="760" alt="Fig 23 Keyword Domain" src="https://github.com/user-attachments/assets/c87a3f70-c0cc-4912-9f88-fc006775aa80" />
+
 
 *Figure 6: Keyword "domain": carved letter fragment from unallocated space.*
 
