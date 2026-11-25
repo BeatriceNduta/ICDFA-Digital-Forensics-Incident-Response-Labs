@@ -45,7 +45,8 @@ md5sum Ch01InChap01.dd | tee ../reports/evidence_md5.txt
 chmod a-w Ch01InChap01.dd
 ```
 
-![Figure 1: Hashes of the image taken in Kali, then write permission removed](screenshots/fig03_hashing_and_write_protection.png)
+<img width="676" height="287" alt="Fig 3 sha256sum_mD5sum" src="https://github.com/user-attachments/assets/6c37ad44-43ac-4f13-8c85-b53a534a4143" />
+
 
 *Figure 1: Hashes of the image taken in Kali, then write permission removed.*
 
@@ -69,11 +70,12 @@ I created the case `CIP-B102-Lab1-Beatrice_Nduta` (22 Nov 2026, 18:26 EAT), adde
 
 **Exports:** two exports succeeded (Extract File(s) to the case Export folder); sizes matched Autopsy (24,064 and 23,552 bytes). Four deleted files were tagged "Recovered file". `Income.xls` is an allocated (not deleted) Office file.
 
-![Figure 2: Autopsy file views showing 4 deleted file-system entries](screenshots/fig11_file_views_deleted_files.png)
+<img width="1352" height="765" alt="Fig 11 file system contents" src="https://github.com/user-attachments/assets/a4a614af-0e59-4b35-b65f-fce6b687a678" />
+
 
 *Figure 2: Autopsy file views: 4 deleted file-system entries listed.*
 
-![Figure 3: Exported Office files and their SHA-256 hashes](screenshots/fig19_exported_files_hashes.png)
+<img width="1918" height="970" alt="Fig 19 File extract and hashing" src="https://github.com/user-attachments/assets/a1f3e3c3-a0dd-40a5-b8b3-8da6f69d5002" />
 
 *Figure 3: Exported Office files and their SHA-256 hashes (PowerShell).*
 
