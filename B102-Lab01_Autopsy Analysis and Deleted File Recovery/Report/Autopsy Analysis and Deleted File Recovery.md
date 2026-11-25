@@ -59,11 +59,11 @@ Apply the digital investigation workflow (identification, collection, examinatio
 | Utilities | `wget`, `file`, `ls`, `sha256sum`, `md5sum`, `chmod`, PowerShell `Get-FileHash` |
 | Constraint | Sleuth Kit command-line tools (fls, icat, istat, blkcat) were **not** used; they belong to a separate lab |
 
-![Figure 6: Autopsy version information](screenshots/fig06_autopsy_version.png)
+<img width="674" height="785" alt="Fig 6 Autopsy version" src="https://github.com/user-attachments/assets/e0a24604-761f-4111-88b2-6dbbcf65196b" />
 
 *Figure 6: Autopsy version information.*
 
-![Figure 7: Examiner workstation time in WAT](screenshots/fig07_workstation_time_wat.png)
+<img width="298" height="49" alt="Fig 7 Time zone" src="https://github.com/user-attachments/assets/b98bcb3c-9b5b-43a7-bb17-0fbf5261d6ec" />
 
 *Figure 7: Examiner workstation time in WAT.*
 
@@ -108,11 +108,11 @@ ls -lh Ch01InChap01.dd
 
 `mkdir -p` with brace expansion created the case folder and its four sub-folders. `file` identified a DOS/MBR boot sector with a 12-bit FAT file system, so the download is a genuine disk image and not an HTML error page.
 
-![Figure 1: Local investigation folders created in Kali](screenshots/fig01_folder_structure.png)
+<img width="593" height="401" alt="Fig 1 dir making" src="https://github.com/user-attachments/assets/fdcfb606-4d6f-4fb0-81d9-ace198923bca" />
 
 *Figure 1: Local investigation folders created in Kali.*
 
-![Figure 2: Download and identification of the training image](screenshots/fig02_download_and_file_identification.png)
+<img width="1681" height="785" alt="Fig 2 Wget_Disk_Image" src="https://github.com/user-attachments/assets/1e4798b7-ac71-4d52-a51d-a443346fb0b0" />
 
 *Figure 2: Download and identification of the training image.*
 
@@ -124,11 +124,11 @@ md5sum Ch01InChap01.dd | tee ../reports/evidence_md5.txt
 chmod a-w Ch01InChap01.dd
 ```
 
-![Figure 3: Hashing the image and removing write permission](screenshots/fig03_hashing_and_write_protection.png)
+<img width="676" height="287" alt="Fig 3 sha256sum_mD5sum" src="https://github.com/user-attachments/assets/0e449a07-e2b3-492d-9b40-8c072176b081" />
 
 *Figure 3: Hashing the image and removing write permission.*
 
-![Figure 4: File details and saved hash records](screenshots/fig04_file_details_and_hash_records.png)
+<img width="702" height="322" alt="Fig 4 file details" src="https://github.com/user-attachments/assets/baed8894-73e8-4ec9-bef9-a3b28d14602e" />
 
 *Figure 4: File details and saved hash records.*
 
@@ -140,19 +140,19 @@ chmod a-w Ch01InChap01.dd
 4. The first keyword search failed ("No files were indexed"). The image was re-ingested with the Keyword Search module and Solr indexing enabled.
 5. Tagged files, exported two Office documents with Extract File(s), ran keyword searches and generated an HTML report.
 
-![Figure 5: Properties of the case folder on the Windows Desktop](screenshots/fig05_case_folder_properties.png)
+<img width="475" height="572" alt="Fig 5 New case details " src="https://github.com/user-attachments/assets/48335cf5-aac8-4975-b536-2ba7cd8ac2bb" />
 
 *Figure 5: Properties of the case folder on the Windows Desktop.*
 
-![Figure 8: Autopsy case details (contact details redacted)](screenshots/fig08_autopsy_case_details_redacted.png)
+<img width="1091" height="649" alt="Fig 8 Autopsy case details" src="https://github.com/user-attachments/assets/bf92076a-e7b6-4bc2-a409-c90e111c0ea7" />
 
 *Figure 8: Autopsy case details (contact details redacted).*
 
-![Figure 9: Display time zone set to Africa/Lagos (WAT)](screenshots/fig09_timezone_africa_lagos.png)
+<img width="362" height="115" alt="Fig 9 WAT timezone change" src="https://github.com/user-attachments/assets/e40f1f6d-b214-4d4b-b77c-1338a55d3dbf" />
 
 *Figure 9: Display time zone set to Africa/Lagos (WAT).*
 
-![Figure 10: Ingest module startup failure (Cyber Triage licence)](screenshots/fig10_ingest_module_error.png)
+<img width="1902" height="1063" alt="Fig 10 error" src="https://github.com/user-attachments/assets/f659480e-9617-40cd-b654-71aaf021cf98" />
 
 *Figure 10: Ingest module startup failure (Cyber Triage licence).*
 
@@ -160,19 +160,19 @@ chmod a-w Ch01InChap01.dd
 
 The data source was listed with Raw Single type, 1,474,560 bytes and 512-byte sectors. Autopsy showed MD5, SHA1 and SHA-256 as "Not calculated", and the file size matched the independent PowerShell check.
 
-![Figure 11: Autopsy file views of the image](screenshots/fig11_file_views_deleted_files.png)
+<img width="1352" height="765" alt="Fig 11 file system contents" src="https://github.com/user-attachments/assets/8fc282dc-65ae-4bd8-9b86-74578a01b2e9" />
 
 *Figure 11: Autopsy file views of the image.*
 
-![Figure 12: File metadata of Regrets.doc](screenshots/fig12_regrets_doc_metadata.png)
+<img width="821" height="607" alt="Fig 12 file metadata" src="https://github.com/user-attachments/assets/4d543c15-82c1-47de-97b4-7ca24eb53083" />
 
 *Figure 12: File metadata of Regrets.doc.*
 
-![Figure 13: Data source metadata for the image](screenshots/fig13_data_source_metadata.png)
+<img width="890" height="578" alt="Fig 13 case study metadata" src="https://github.com/user-attachments/assets/b8f528bb-adde-4f27-9de7-b82f232a4ae9" />
 
 *Figure 13: Data source metadata for the image.*
 
-![Figure 14: Independent size check in PowerShell](screenshots/fig14_powershell_size_check.png)
+<img width="1003" height="177" alt="Fig 14 File size verification" src="https://github.com/user-attachments/assets/5fb12bc0-87d3-4d41-aca0-a3467c65415a" />
 
 *Figure 14: Independent size check in PowerShell.*
 
@@ -200,19 +200,18 @@ Four deleted file-system entries were identified (Dir and Meta flags Unallocated
 
 `Income.xls` is an allocated (not deleted) Office file.
 
-![Figure 15: Office documents with extracted text](screenshots/fig15_office_documents_text.png)
+<img width="1350" height="762" alt="Fig 15 Office docs deleted files view" src="https://github.com/user-attachments/assets/ab95f832-5f0f-4edd-9f34-030c5acd49e3" />
 
 *Figure 15: Office documents with extracted text.*
 
-![Figure 16: Deleted plain text files (credentials redacted)](screenshots/fig16_deleted_text_files_redacted.png)
+<img width="1361" height="765" alt="Fig 16 plain text file metadata" src="https://github.com/user-attachments/assets/2f088ed5-c7c3-423d-8811-1936801c8175" />
 
 *Figure 16: Deleted plain text files (credentials redacted).*
 
-![Figure 17: Billing Letter.doc details and extracted metadata](screenshots/fig17_billing_letter_metadata.png)
-
+<img width="1916" height="1068" alt="Fig 17 Billing letter file details" src="https://github.com/user-attachments/assets/62041207-50a4-432b-8633-ba3f7f8ffb1e" />
 *Figure 17: Billing Letter.doc details and extracted metadata.*
 
-![Figure 18: Deletion flags for the Office files](screenshots/fig18_deletion_flags.png)
+<img width="1343" height="365" alt="Fig 18 file tagging" src="https://github.com/user-attachments/assets/6a8ac333-b9f2-4189-904a-6397acd8a008" />
 
 *Figure 18: Deletion flags for the Office files.*
 
@@ -225,11 +224,11 @@ Four deleted files were tagged **Recovered file**. Two deleted Office documents 
 | `Billing Letter.doc` | `7EEFEB4187BB551F366DA33BCAB5B7224F905BB98F37797C28F183F72AEC2E99` |
 | `Regrets.doc` | `109048540A0A1A452F9346522A325219B471EAE41B85A6298890E94AE750B965` |
 
-![Figure 19: Exported files and their SHA-256 hashes](screenshots/fig19_exported_files_hashes.png)
+<img width="1918" height="970" alt="Fig 19 File extract and hashing" src="https://github.com/user-attachments/assets/09d7526a-80de-4cdc-a384-cada1abc7975" />
 
 *Figure 19: Exported files and their SHA-256 hashes.*
 
-![Figure 20: Deleted files tagged "Recovered file"](screenshots/fig20_recovered_file_tags.png)
+<img width="1346" height="676" alt="Fig 20 tags" src="https://github.com/user-attachments/assets/b68bdf83-51e1-4971-98cf-3d0947f4be9a" />
 
 *Figure 20: Deleted files tagged "Recovered file".*
 
@@ -245,15 +244,15 @@ Four deleted files were tagged **Recovered file**. Two deleted Office documents 
 
 Hits were tagged as **Keyword Hit - Finding** (supports a finding) or **Keyword Hit - Lead** (needs follow-up). The carved fragment (a letter dated 13 October 2005 to Laura Roper) has no filename, path or timestamps, so it supports the content of the letter but not its origin or timing.
 
-![Figure 21: Keyword search error before re-ingest](screenshots/fig21_keyword_search_error.png)
+<img width="1343" height="727" alt="Fig 21 error" src="https://github.com/user-attachments/assets/39593bac-4c86-4e28-894e-e7f630dabbf5" />
 
 *Figure 21: Keyword search error before re-ingest.*
 
-![Figure 22: Keyword search for "George"](screenshots/fig22_keyword_george.png)
+<img width="1352" height="682" alt="Fig 22 Keyword search George" src="https://github.com/user-attachments/assets/21d2278b-240c-45bf-9b88-7450447a0c53" />
 
 *Figure 22: Keyword search for "George".*
 
-![Figure 23: Keyword search for "domain"](screenshots/fig23_keyword_domain.png)
+<img width="1340" height="760" alt="Fig 23 Keyword Domain" src="https://github.com/user-attachments/assets/5c9fa8a3-7418-4c61-aaa7-2c853c0f4c85" />
 
 *Figure 23: Keyword search for "domain".*
 
@@ -265,15 +264,15 @@ Hits were tagged as **Keyword Hit - Finding** (supports a finding) or **Keyword 
 | Contents | 44 keyword hits, 6 metadata items, 10 tagged files |
 | `report.html` SHA-256 | `E7D38D6ECBA31A3419607462850FFBBE3127322F96E353B58F62E41BFCFD6A68` |
 
-![Figure 24: Autopsy HTML report generated](screenshots/fig24_report_generated.png)
+<img width="1356" height="752" alt="Fig 24 Report" src="https://github.com/user-attachments/assets/f49de9e7-a57c-4b80-b614-785e6e2376e7" />
 
 *Figure 24: Autopsy HTML report generated.*
 
-![Figure 25: Autopsy Forensic Report summary](screenshots/fig25_autopsy_html_report.png)
+<img width="1675" height="970" alt="Fig 25 Autopsy report" src="https://github.com/user-attachments/assets/a9e40b36-80e2-4200-bb35-42325f664232" />
 
 *Figure 25: Autopsy Forensic Report summary.*
 
-![Figure 26: Full path and SHA-256 hash of the report file](screenshots/fig26_report_path_and_hash.png)
+<img width="1897" height="381" alt="Fig 26 Full report path" src="https://github.com/user-attachments/assets/1d0612f6-fa00-4a01-9ea6-2fdc18b0bbe2" />
 
 *Figure 26: Full path and SHA-256 hash of the report file.*
 
