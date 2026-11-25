@@ -1,14 +1,25 @@
-# CIP-B102 Lab 01: Introduction to Digital Forensics and Autopsy Image Examination
+# CIP-B102 Lab 01 Report: Introduction to Digital Forensics and Autopsy Image Examination
 
 **Student:** Beatrice Nduta
 **Course:** CIP-B102 Foundations of Computer and Digital Forensics
 **Institution:** International Cybersecurity and Digital Forensics Academy (ICDFA)
-**Case:** CIP-B102-Lab1-Beatrice_Nduta (case number InChap_0001)
-**Dates:** 22 to 24 November 2026
-**Time zone used for interpretation:** Africa/Lagos (WAT, GMT+1)
+**Case:** CIP-B102-Lab1-Beatrice_Nduta
+**Report date:** 24 November 2026
 
 > Educational lab work on an authorised training image only. The original evidence image is not included in this repository.
 
+---
+
+## 1. Examiner and case details
+
+| Field | Details |
+|---|---|
+| Examiner | Beatrice Nduta |
+| Case number | InChap_0001 (single-user case) |
+| Software | Autopsy 4.23.1, Sleuth Kit 4.15.0 |
+| Examination dates | 22 to 24 November 2026 |
+| Environments | Kali Linux VM (download, hashing); Windows host (Autopsy, PowerShell) |
+| Time zone | Africa/Lagos (WAT, GMT+1) set in Autopsy; the Kali clock showed EAT (+0300) |
 ---
 
 ## Table of contents
