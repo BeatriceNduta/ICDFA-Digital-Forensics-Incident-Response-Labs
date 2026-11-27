@@ -25,7 +25,7 @@ An investigating officer requested a command-line examination of raw image `Ch01
 
 
 
-![Fig. 1: Workspace and TSK verification](screenshots/Fig_01_Working_Dir.png)
+<img width="1573" height="717" alt="Fig 1 working Dir" src="https://github.com/user-attachments/assets/b97286b5-9896-4cad-bba6-a8782b2e493c" />
 
 
 
@@ -55,9 +55,9 @@ Acquisition checks (`stat`, `file`, `md5sum`, `sha256sum`) matched the ICDFA ref
 
 
 
-![Fig. 2: Evidence hashing](screenshots/Fig_02_Evidence_Hashing.png)  
+<img width="1356" height="413" alt="Fig 2 Evidence file Download   Hashing" src="https://github.com/user-attachments/assets/00adbd59-5545-4c37-8c76-0512a876e86e" />
 
-![Fig. 3: Image and filesystem examination](screenshots/Fig_03_Image_Filesystem_Exam.png)
+<img width="1363" height="708" alt="Fig 3 Image   Filesys examination" src="https://github.com/user-attachments/assets/fbc2370f-eddc-41cd-85cb-3999c05546d6" />
 
 
 
@@ -79,11 +79,11 @@ Enumeration via `fls -r` and `fls -r -d` identified six root entries (plus four 
 
 
 
-![Fig. 4: Deleted directory listing](screenshots/Fig_04_fls_Deleted_Listing.png)  
+<img width="1188" height="692" alt="Fig 4 fls deleted file listing " src="https://github.com/user-attachments/assets/5b46f42a-2273-420d-9bb7-c6b672ce1041" />
 
-![Fig. 5: Metadata of letter1.txt](screenshots/Fig_05_letter1_Metadata.png)  
+<img width="1007" height="450" alt="Fig 5 letter1 deleted file meta" src="https://github.com/user-attachments/assets/82b3a456-4282-42cd-97bf-8d41887a4780" /> 
 
-![Fig. 6: Hexadecimal sector slack inspection](screenshots/Fig_06_letter1_icat_blkcat.png)
+<img width="1365" height="703" alt="Fig 6 evidence file display using icat   blkcat" src="https://github.com/user-attachments/assets/9dcf8fbb-f169-46f1-86d9-7ee3f5d53b99" />
 
 
 
@@ -115,13 +115,13 @@ Because `27 x 512 = 13,824` bytes, zero sector slack existed at sector 311, and 
 
 
 
-![Fig. 7: istat and icat extraction of INCOME.XLS](screenshots/Fig_07_INCOME_Multiple_Sectors.png)  
+<img width="1337" height="697" alt="Fig 7 file multiple sectors" src="https://github.com/user-attachments/assets/cf5174d7-5cf4-41a9-9516-c0353ced7cb2" />
 
-![Fig. 8: Sector-level extraction and byte trimming](screenshots/Fig_08_Data_Unit_Recovery.png)  
+<img width="1363" height="321" alt="Fig 8 data unit recovery method " src="https://github.com/user-attachments/assets/72403c21-2700-4b31-aab5-f57d106c6ab4" />
 
-![Fig. 9: tsk_recover automated output](screenshots/Fig_09_tsk_automated_recovery.png)  
+<img width="1361" height="696" alt="Fig 9 tsk automated recovery method" src="https://github.com/user-attachments/assets/9eef1c98-d8bb-44c0-931f-edd92981d436" /> 
 
-![Fig. 10: Three-way hash and cmp verification](screenshots/Fig_10_Integrity_Comparison.png)
+<img width="1362" height="728" alt="Fig 10 file Integrity and content comparison" src="https://github.com/user-attachments/assets/641833e2-dbed-4f21-bfd9-398348b0df3a" />
 
 
 
@@ -137,4 +137,4 @@ Executing `ffind Ch01InChap01.dd 13` resolved metadata address `13` to `/Income.
 
 
 
-![Fig. 11: ffind path resolution](screenshots/Fig_11_ffind_Output.png)
+<img width="1365" height="706" alt="Fig 11 ffind output" src="https://github.com/user-attachments/assets/bce81e77-56c6-4a8c-af29-c49c9a5b48c6" />
