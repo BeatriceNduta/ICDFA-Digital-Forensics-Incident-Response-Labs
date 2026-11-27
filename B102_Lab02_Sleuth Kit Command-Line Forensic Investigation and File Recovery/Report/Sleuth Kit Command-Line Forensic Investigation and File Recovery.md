@@ -78,7 +78,7 @@ ls -ld evidence recovered reports screenshots
 
 
 
-![Fig. 1: Sleuth Kit v4.15.0 installation verification and working directory structure](screenshots/Fig_01_Working_Dir.png)  
+<img width="1573" height="717" alt="Fig 1 working Dir" src="https://github.com/user-attachments/assets/57358444-80ed-4392-a7aa-0c7cafd0703a" />
 
 *Figure 1: Verification of Sleuth Kit v4.15.0 tools in `/usr/bin/` and segregated workspace creation (`screenshots/Fig_01_Working_Dir.png`).*
 
@@ -116,7 +116,7 @@ sha256sum Ch01InChap01.dd | tee ../reports/image_sha256.txt
 
 
 
-![Fig. 2: Evidence acquisition, file signature identification, and cryptographic hashing](screenshots/Fig_02_Evidence_Hashing.png)  
+<img width="1356" height="413" alt="Fig 2 Evidence file Download   Hashing" src="https://github.com/user-attachments/assets/1adb7ae3-bf72-4b11-bfbe-a6f2d53f665a" /> 
 
 *Figure 2: Acquisition of `Ch01InChap01.dd` (1,474,560 bytes) and MD5/SHA-256 baseline hashing (`screenshots/Fig_02_Evidence_Hashing.png`).*
 
@@ -168,7 +168,7 @@ fsstat Ch01InChap01.dd | tee ../reports/03_fsstat.txt
 
 
 
-![Fig. 3: Image format and FAT12 filesystem layout from img_stat, mmls, and fsstat](screenshots/Fig_03_Image_Filesystem_Exam.png)  
+<img width="1363" height="708" alt="Fig 3 Image   Filesys examination" src="https://github.com/user-attachments/assets/5521ff3e-0bca-49b9-9698-c878b680ceb8" />  
 
 *Figure 3: Raw image format and FAT12 sector layout confirmed via `img_stat`, `mmls`, and `fsstat` (`screenshots/Fig_03_Image_Filesystem_Exam.png`).*
 
@@ -208,7 +208,7 @@ fls -r -d Ch01InChap01.dd | tee ../reports/06_deleted.txt
 
 
 
-![Fig. 4: Root directory and deleted file enumeration using fls](screenshots/Fig_04_fls_Deleted_Listing.png)  
+<img width="1188" height="692" alt="Fig 4 fls deleted file listing " src="https://github.com/user-attachments/assets/0edcd872-56a4-4e1b-b644-cc337528469a" /> 
 
 *Figure 4: Root directory and deleted file enumeration (`fls`, `fls -r`, `fls -r -d`) showing four deleted entries (`screenshots/Fig_04_fls_Deleted_Listing.png`).*
 
@@ -266,7 +266,7 @@ sha256sum ../recovered/letter1_icat.txt
 
 
 
-![Fig. 5: Metadata examination and SHA-256 verification of deleted file letter1.txt](screenshots/Fig_05_letter1_Metadata.png)  
+<img width="1007" height="450" alt="Fig 5 letter1 deleted file meta" src="https://github.com/user-attachments/assets/4b1a79a1-2301-4387-bacc-a6694aea6ab6" />  
 
 *Figure 5: Metadata inspection (`istat` entry 15), `icat` extraction, and SHA-256 verification of `letter1.txt` (`screenshots/Fig_05_letter1_Metadata.png`).*
 
@@ -306,7 +306,7 @@ blkcat Ch01InChap01.dd 312 | xxd | head -n 16
 
 
 
-![Fig. 6: Content preview and hexadecimal sector slack inspection of sector 312](screenshots/Fig_06_letter1_icat_blkcat.png)  
+<img width="1365" height="703" alt="Fig 6 evidence file display using icat   blkcat" src="https://github.com/user-attachments/assets/2b1650c2-ee89-4bf1-aa22-583a1f0213e4" />  
 
 *Figure 6: Text display via `cat` and raw hexadecimal dump of sector 312 via `blkcat | xxd` showing 391 bytes of zero slack (`screenshots/Fig_06_letter1_icat_blkcat.png`).*
 
@@ -370,7 +370,7 @@ istat Ch01InChap01.dd 13 | tee ../reports/08_income_istat.txt
 
 
 
-![Fig. 7: istat metadata and icat extraction of INCOME.XLS (sectors 285-311)](screenshots/Fig_07_INCOME_Multiple_Sectors.png)  
+<img width="1337" height="697" alt="Fig 7 file multiple sectors" src="https://github.com/user-attachments/assets/a8b240b3-ebe0-4b23-a970-151dd18c9ae1" /> 
 
 *Figure 7: Metadata inspection (`istat` entry 13) confirming 27 contiguous sectors (`285–311`) and `icat` recovery of `INCOME_icat.xls` (`screenshots/Fig_07_INCOME_Multiple_Sectors.png`).*
 
@@ -394,7 +394,7 @@ istat Ch01InChap01.dd 13 | tee ../reports/08_income_istat.txt
 
 
 
-![Fig. 8: Contiguous sector extraction and exact-byte trimming with head](screenshots/Fig_08_Data_Unit_Recovery.png)  
+<img width="1363" height="321" alt="Fig 8 data unit recovery method " src="https://github.com/user-attachments/assets/afce46d2-8f6f-4427-a2c1-e1280def5425" />  
 
 *Figure 8: Exact-length byte trimming (`head -c 13824`) and OLE2 file signature verification of `INCOME_blkcat.xls` (`screenshots/Fig_08_Data_Unit_Recovery.png`).*
 
@@ -416,7 +416,7 @@ istat Ch01InChap01.dd 13 | tee ../reports/08_income_istat.txt
 
 
 
-![Fig. 9: Automated extraction via tsk_recover and recovered artifact listing](screenshots/Fig_09_tsk_automated_recovery.png)  
+<img width="1361" height="696" alt="Fig 9 tsk automated recovery method" src="https://github.com/user-attachments/assets/aef4c48a-8521-4f69-abd2-e7232a4ed942" />  
 
 *Figure 9: Automated recovery via `tsk_recover -e` and directory listing of all recovered `INCOME` artifacts (`screenshots/Fig_09_tsk_automated_recovery.png`).*
 
@@ -440,7 +440,7 @@ file ../recovered/INCOME_icat.xls
 
 
 
-![Fig. 10: SHA-256 hash verification and cmp byte-for-byte comparison](screenshots/Fig_10_Integrity_Comparison.png)  
+<img width="1362" height="728" alt="Fig 10 file Integrity and content comparison" src="https://github.com/user-attachments/assets/86377080-4ecf-4147-b745-835fa0923d90" />  
 
 *Figure 10: Matching SHA-256 digests, binary `cmp` verification (`MATCH`), and OLE2 metadata output for `INCOME.XLS` (`screenshots/Fig_10_Integrity_Comparison.png`).*
 
@@ -492,7 +492,7 @@ file ../recovered/INCOME_icat.xls
 
 
 
-![Fig. 11: Terminal output of ffind Ch01InChap01.dd 13 resolving /Income.xls](screenshots/Fig_11_ffind_Output.png)  
+<img width="1365" height="706" alt="Fig 11 ffind output" src="https://github.com/user-attachments/assets/ab0c05f8-c6c9-450d-99dd-9c482492835b" />
 
 *Figure 11: Execution of `ffind Ch01InChap01.dd 13` resolving metadata entry 13 to `/Income.xls` (`screenshots/Fig_11_ffind_Output.png`).*
 
