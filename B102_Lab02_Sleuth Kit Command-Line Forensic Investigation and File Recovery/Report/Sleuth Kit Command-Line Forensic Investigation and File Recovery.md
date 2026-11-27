@@ -4,16 +4,11 @@
 | Field | Details |
 |---|---|
 |Institution | International Cybersecurity and Digital Forensics Academy (ICDFA)  |
-
 |Course | CIP-B102 — Foundations of Computer and Digital Forensics (Module 2: The Sleuth Kit Tutorial) | 
-
-**Examiner:** Beatrice Nduta (`kali@kali`)  
-
-**Environment:** Kali Linux 2026.2 (`kali-linux-2026.2-vmware-amd64`), The Sleuth Kit (TSK) v4.15.0  
-
-**Evidence Image:** `Ch01InChap01.dd` (Raw FAT12 Volume, 1,474,560 bytes)  
-
-**Working Directory:** `/home/kali/CIP-B102-Lab02_Beatrice_Nduta`  
+|Examiner | Beatrice Nduta (`kali@kali`) |  
+|Environment | Kali Linux 2026.2 (`kali-linux-2026.2-vmware-amd64`), The Sleuth Kit (TSK) v4.15.0  |
+|Evidence Image | `Ch01InChap01.dd` (Raw FAT12 Volume, 1,474,560 bytes)  |
+|Working Directory | `/home/kali/CIP-B102-Lab02_Beatrice_Nduta`  |
 
 
 
