@@ -1,10 +1,11 @@
 # CIP-B102 Practical Lab 02: Command-Line Forensic Image Investigation
 
 
+| Field | Details |
+|---|---|
+|Institution | International Cybersecurity and Digital Forensics Academy (ICDFA)  |
 
-**Institution:** International Cybersecurity and Digital Forensics Academy (ICDFA)  
-
-**Course:** CIP-B102 — Foundations of Computer and Digital Forensics (Module 2: The Sleuth Kit Tutorial)  
+|Course | CIP-B102 — Foundations of Computer and Digital Forensics (Module 2: The Sleuth Kit Tutorial) | 
 
 **Examiner:** Beatrice Nduta (`kali@kali`)  
 
