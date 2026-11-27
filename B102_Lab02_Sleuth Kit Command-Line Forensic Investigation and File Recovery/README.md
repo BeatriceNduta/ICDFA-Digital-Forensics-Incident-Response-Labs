@@ -1,10 +1,10 @@
-# CIP-B102 Practical Lab 02: Command-Line Forensic Image Investigation
+# CIP-B102 Practical Lab 02: Command-Line Forensic Investigation (Concise Report)
 
 
 
 **Institution:** International Cybersecurity and Digital Forensics Academy (ICDFA)  
 
-**Course:** CIP-B102 — Foundations of Computer and Digital Forensics (Module 2: The Sleuth Kit Tutorial)  
+**Course:** CIP-B102 — Foundations of Computer and Digital Forensics  
 
 **Examiner:** Beatrice Nduta (`kali@kali`)  
 
@@ -12,7 +12,21 @@
 
 **Evidence Image:** `Ch01InChap01.dd` (Raw FAT12 Volume, 1,474,560 bytes)  
 
-**Working Directory:** `/home/kali/CIP-B102-Lab02_Beatrice_Nduta`  
+
+
+---
+
+
+
+## 1. Scenario, Governance, and Environment Setup
+
+
+
+An investigating officer requested a command-line examination of raw image `Ch01InChap01.dd` to enumerate directory records, recover deleted text file `letter1.txt` and spreadsheet `INCOME.XLS` via metadata and sector methods, and verify integrity through cryptographic digests. All operations ran in an isolated Kali Linux environment (`/home/kali/CIP-B102-Lab02_Beatrice_Nduta`) with verified TSK v4.15.0 utilities. The source image remained read-only and unmodified inside `evidence/`, with logs and extracted artefacts written exclusively to `reports/`, `recovered/`, and `screenshots/`.
+
+
+
+![Fig. 1: Workspace and TSK verification](screenshots/Fig_01_Working_Dir.png)
 
 
 
@@ -20,119 +34,31 @@
 
 
 
-## 1. Scenario, Scope, and Forensic Governance
+## 2. Evidence Register and Filesystem Geometry
 
 
 
-### Investigation Scenario
-
-An investigating officer requested a documented command-line forensic examination of the raw training image `Ch01InChap01.dd`. The objective is to enumerate allocated and deleted directory entries, recover the deleted text file `letter1.txt` and the spreadsheet `INCOME.XLS` using independent metadata-level and sector-level recovery techniques, verify file integrity using cryptographic hashes, and report all material observations objectively without assuming wrongdoing.
+Acquisition checks (`stat`, `file`, `md5sum`, `sha256sum`) matched the ICDFA reference baseline. Structural inspection via `img_stat`, `mmls`, and `fsstat` confirmed an unpartitioned raw FAT12 volume (2,880 sectors x 512 bytes; `Sectors before file system: 0`), permitting direct TSK execution without a sector offset (`-o`).
 
 
 
-### Authorised Scope and Preservation Rules
-
-* Operated exclusively on the authorised ICDFA training image inside an isolated Kali Linux virtual laboratory.
-
-* Executed no destructive disk or partition commands against physical or virtual drives.
-
-* Never mounted `Ch01InChap01.dd` read-write and never modified the source image inside `evidence/`.
-
-* Stored all command outputs, extracted files, and screenshots in separate `reports/`, `recovered/`, and `screenshots/` directories.
-
-* Conducted as a standalone command-line investigation independent of Autopsy Lab 01.
-
-
-
----
-
-
-
-## 2. Laboratory Environment Preparation
-
-
-
-The Sleuth Kit (`sleuthkit`) and native Linux inspection tools (`xxd`, `file`, `curl`) were verified on Kali Linux. Binary path checks confirmed `/usr/bin/` availability for all required utilities, and `fls -V` confirmed **The Sleuth Kit ver 4.15.0**.
-
-
-
-```bash
-
-sudo apt update && sudo apt install -y sleuthkit xxd file curl
-
-command -v img_stat fsstat fls icat istat blkcat tsk_recover
-
-fls -V
-
-
-
-mkdir -p ~/CIP-B102-Lab02_Beatrice_Nduta/{evidence,recovered,reports,screenshots}
-
-cd ~/CIP-B102-Lab02_Beatrice_Nduta
-
-pwd
-
-ls -ld evidence recovered reports screenshots
-
-```
-
-
-
-* **Verified Directory Structure:** `/home/kali/CIP-B102-Lab02_Beatrice_Nduta` containing `evidence`, `recovered`, `reports`, and `screenshots` (documented in **Fig. 1**).
-
-
-
----
-
-
-
-## 3. Evidence Acquisition, Register, and Cryptographic Verification
-
-
-
-`Ch01InChap01.dd` was downloaded into `~/CIP-B102-Lab02_Beatrice_Nduta/evidence` and immediately verified using `file`, `stat`, `md5sum`, and `sha256sum` (**Fig. 2**).
-
-
-
-```bash
-
-cd ~/CIP-B102-Lab02_Beatrice_Nduta/evidence
-
-curl -fL --retry 2 -o Ch01InChap01.dd \
-
-  "https://www.dropbox.com/s/nw23q14vzsykyup/Ch01InChap01.dd?dl=1"
-
-file Ch01InChap01.dd
-
-stat -c "%n | %s bytes" Ch01InChap01.dd
-
-md5sum Ch01InChap01.dd | tee ../reports/image_md5.txt
-
-sha256sum Ch01InChap01.dd | tee ../reports/image_sha256.txt
-
-```
-
-
-
-### Evidence Register
-
-
-
-| Attribute | Recorded Value |
+| Register / Geometry Field | Verified Observation |
 
 | :--- | :--- |
 
-| **Evidence File & Location** | `~/CIP-B102-Lab02_Beatrice_Nduta/evidence/Ch01InChap01.dd` |
-
-| **File Signature (`file`)** | `DOS/MBR boot sector, code offset 0x34+2, OEM-ID ",'k0nIHC" cached by Windows 9M, root entries 224, sectors 2880 (volumes <= 32 MB), sectors/FAT 9, sectors/track 18, dos < 4.0 BootSector (0), FAT (12 bit by descriptor+sectors), followed by FAT` |
-
-| **Measured File Size** | `1474560 bytes` (2,880 sectors x 512 bytes/sector) |
+| **Evidence Path & Size** | `evidence/Ch01InChap01.dd` — **1,474,560 bytes** (2,880 sectors; range `0–2879`) |
 
 | **MD5 Hash** | `a117773bcf1fc88ec0ab8e0a349fbbcb` |
 
 | **SHA-256 Hash** | `3ce8053e4f3d9c8ab98b3aadb2480685efb8e4980d34297b83bd5a09b1a7b122` |
 
-| **Reference Comparison** | Exact match to slide-deck reference size (`1,474,560 bytes`) and MD5 (`a117773bcf1fc88ec0ab8e0a349fbbcb`) |
+| **FAT12 Volume Layout** | OEM: `,'k0nIHC` \| Boot: `0` \| FAT0: `1–9` \| FAT1: `10–18` \| Root Dir: `19–32` \| Clusters: `33–2879` |
+
+
+
+![Fig. 2: Evidence hashing](screenshots/Fig_02_Evidence_Hashing.png)  
+
+![Fig. 3: Image and filesystem examination](screenshots/Fig_03_Image_Filesystem_Exam.png)
 
 
 
@@ -140,157 +66,63 @@ sha256sum Ch01InChap01.dd | tee ../reports/image_sha256.txt
 
 
 
-## 4. Image Structure, Filesystem Geometry, and Directory Enumeration
+## 3. Directory Enumeration and Deleted File Recovery (`letter1.txt`)
 
 
 
-### Image and Filesystem Examination (`img_stat`, `mmls`, `fsstat`)
+Enumeration via `fls -r` and `fls -r -d` identified six root entries (plus four TSK virtual entries), comprising two *allocated* live files (`5: Client Info.mdb`, `13: Income.xls`) and **four deleted (unallocated) entries** marked with `*`: `8: Billing Letter.doc`, `11: confirmation.txt`, `15: letter1.txt`, and `17: Regrets.doc`. Deleted FAT entries have their leading character overwritten with deletion byte `0xE5` (shown as `_` in `istat`) and their FAT chains cleared, freeing clusters for reuse while leaving sector payloads intact until overwritten.
 
 
 
-```bash
+* **Metadata (`istat Ch01InChap01.dd 15`):** `_ETTER1.TXT` (`Not Allocated`), size **121 bytes**, single sector **312** (Written `2005-12-09 06:51:50 EAT`; Created `06:59:09 EAT`).
 
-img_stat Ch01InChap01.dd | tee ../reports/01_img_stat.txt
-
-mmls Ch01InChap01.dd | tee ../reports/02_mmls.txt
-
-fsstat Ch01InChap01.dd | tee ../reports/03_fsstat.txt
-
-```
+* **Recovery & Slack Analysis:** Metadata recovery via `icat -r Ch01InChap01.dd 15 > ../recovered/letter1_icat.txt` yielded valid CRLF ASCII text (SHA-256: `341065f2c3c2168e246aa9a346439dfa4e6e4c55de4b1b8ecc78e4b83206545f`) containing a note from "George" to "Earl" requesting a meeting on August 18th. Raw inspection via `blkcat Ch01InChap01.dd 312 | xxd` demonstrated that while `icat` truncates output to the exact 121-byte file size, `blkcat` reads all 512 bytes of sector 312, exposing **391 bytes of trailing `0x00` slack padding** from offset `0x79` to `0x1ff`.
 
 
 
-* **Image Type & Geometry (`img_stat`):** `raw` image, `1474560` bytes, sector size `512` bytes (**Fig. 3**).
+![Fig. 4: Deleted directory listing](screenshots/Fig_04_fls_Deleted_Listing.png)  
 
-* **Partition Check (`mmls`):** No partition table is present (`Sectors before file system: 0`), confirming `Ch01InChap01.dd` is a raw filesystem-only volume (1.44 MB floppy geometry). Consequently, `fsstat` and subsequent TSK commands were run directly without a sector offset (`-o`).
+![Fig. 5: Metadata of letter1.txt](screenshots/Fig_05_letter1_Metadata.png)  
 
-* **FAT12 Layout (`fsstat`):**
-
-  * **Filesystem Type:** `FAT12` (OEM Name: `,'k0nIHC`, Volume ID: `0x0`)
-
-  * **Total Sector Range:** `0 - 2879`
-
-  * **Reserved / Boot Sector:** `0`
-
-  * **FAT 0:** `1 - 9` | **FAT 1:** `10 - 18`
-
-  * **Data Area:** `19 - 2879` (**Root Directory:** `19 - 32`; **Cluster Area:** `33 - 2879`)
+![Fig. 6: Hexadecimal sector slack inspection](screenshots/Fig_06_letter1_icat_blkcat.png)
 
 
 
-### Directory Listing and Deleted Entries (`fls`)
+---
 
 
 
-```bash
-
-fls Ch01InChap01.dd | tee ../reports/04_fls_root.txt
-
-fls -r Ch01InChap01.dd | tee ../reports/05_fls_recursive.txt
-
-fls -r -d Ch01InChap01.dd | tee ../reports/06_deleted.txt
-
-```
+## 4. Multi-Method Recovery and Validation of `INCOME.XLS`
 
 
 
-`fls` enumerated 6 user directory entries plus 4 TSK virtual entries (`$MBR`, `$FAT1`, `$FAT2`, `$OrphanFiles`), identifying **4 deleted entries** (**Fig. 4**):
+`istat Ch01InChap01.dd 13` confirmed `INCOME.XLS` as `Allocated`, size **13,824 bytes**, occupying **27 contiguous sectors** (`285–311`). Three independent extraction methods were executed and compared using `sha256sum`, `cmp -s`, and `file`:
 
 
 
-| Metadata Address | Type / Flag | Status | Filename |
+| Method & Command | Recovered Output Path | Size | SHA-256 Digest & Verification |
 
 | :--- | :--- | :--- | :--- |
 
-| `5` | `r/r` | Allocated | `Client Info.mdb` |
+| **Metadata (`icat`)** | `../recovered/INCOME_icat.xls` | 13,824 B | `8d7cd7204d3dae161a8fa879e184865b3bc4a57a4e688abd522a9ff03f62252d` |
 
-| `8` | `r/r *` | Deleted (Unallocated) | `Billing Letter.doc` |
+| **Sector (`blkcat` + `head`)** | `../recovered/INCOME_blkcat.xls` | 13,824 B | `8d7cd7204d3dae161a8fa879e184865b3bc4a57a4e688abd522a9ff03f62252d` (`MATCH`) |
 
-| `11` | `r/r *` | Deleted (Unallocated) | `confirmation.txt` |
-
-| `13` | `r/r` | Allocated | `Income.xls` |
-
-| `15` | `r/r *` | Deleted (Unallocated) | `letter1.txt` |
-
-| `17` | `r/r *` | Deleted (Unallocated) | `Regrets.doc` |
+| **Automated (`tsk_recover -e`)** | `../recovered/tsk_output/Income.xls` | 13,824 B | Identical 13,824-byte root file (6 files recovered total) |
 
 
 
-* **Allocated vs. Deleted Directory Entries:** An *allocated* entry is an active filesystem record pointing to clusters currently reserved by the OS. A *deleted (unallocated)* entry is a residual directory record marked free for reuse (`0xE5` in the first byte of the FAT entry, shown as `*` in `fls` and `_` in `istat`), while its sector contents remain on disk until overwritten. `fls` only enumerates entries; it does not extract file contents.
+Because `27 x 512 = 13,824` bytes, zero sector slack existed at sector 311, and `cmp -s` confirmed a bit-for-bit match. `file` verified an intact Microsoft Excel OLE2 compound document authored by "Amelia Phillips" (Created `Nov 23 2002`; Last Saved `Dec 9 2005 14:52:18`).
 
 
 
----
+![Fig. 7: istat and icat extraction of INCOME.XLS](screenshots/Fig_07_INCOME_Multiple_Sectors.png)  
 
+![Fig. 8: Sector-level extraction and byte trimming](screenshots/Fig_08_Data_Unit_Recovery.png)  
 
+![Fig. 9: tsk_recover automated output](screenshots/Fig_09_tsk_automated_recovery.png)  
 
-## 5. Deleted Text File Recovery and Sector Analysis (`letter1.txt`)
-
-
-
-### Metadata Examination & `icat` Recovery
-
-
-
-```bash
-
-icat -r Ch01InChap01.dd 15 > ../recovered/letter1_icat.txt
-
-istat Ch01InChap01.dd 15 | tee ../reports/07_letter1_istat.txt
-
-file ../recovered/letter1_icat.txt
-
-sha256sum ../recovered/letter1_icat.txt
-
-```
-
-
-
-* **Metadata Summary (`istat` entry `15`, Fig. 5):**
-
-  * **Allocation State:** `Not Allocated` | **Attributes:** `File, Archive`
-
-  * **Short Name:** `_ETTER1.TXT` (leading byte replaced by FAT deletion marker)
-
-  * **File Size:** `121` bytes
-
-  * **Timestamps (EAT):** Written `2005-12-09 06:51:50` | Accessed `2005-12-09 00:00:00` | Created `2005-12-09 06:59:09`
-
-  * **Sector List:** Single sector `312`
-
-* **Recovered File Verification:**
-
-  * **File Type:** `ASCII text, with CRLF line terminators`
-
-  * **SHA-256 Digest:** `341065f2c3c2168e246aa9a346439dfa4e6e4c55de4b1b8ecc78e4b83206545f`
-
-
-
-### Content Preview and Hexadecimal Sector Inspection (`blkcat` + `xxd`)
-
-
-
-```bash
-
-cat ../recovered/letter1_icat.txt
-
-blkcat Ch01InChap01.dd 312 | xxd | head -n 16
-
-```
-
-
-
-* **Recovered Content (`cat`, Fig. 6):**
-
-  > Earl,  
-
-  > We need to meet on the 18th of August to confirm the work I am doing for you. Please contact me ASAP.  
-
-  >  
-
-  > George
-
-* **`icat` vs. `blkcat` & Slack Padding Interpretation:** `icat` extracts by metadata address (`15`) and automatically truncates output to the exact 121-byte logical file size stored in the directory entry. Conversely, `blkcat` reads the entire 512-byte physical data unit (sector `312`). In the `xxd` output (**Fig. 6**), the 121 bytes of ASCII text occupy byte offsets `0x00` through `0x78` (`47 65 6f 72 67 65` = `"George"`), followed immediately at offset `0x79` by **391 bytes of `0x00` zero padding** (sector slack) to the end of the 512-byte sector. Raw sector output must therefore be trimmed using the `istat` file size before claiming exact file length.
+![Fig. 10: Three-way hash and cmp verification](screenshots/Fig_10_Integrity_Comparison.png)
 
 
 
@@ -298,176 +130,12 @@ blkcat Ch01InChap01.dd 312 | xxd | head -n 16
 
 
 
-## 6. Multi-Method Recovery and Integrity Comparison of `INCOME.XLS`
+## 5. Independent Utility (`ffind`), Limitations, and Conclusion
 
 
 
-### Metadata Verification (`istat` Entry `13`)
+Executing `ffind Ch01InChap01.dd 13` resolved metadata address `13` to `/Income.xls` without modifying the image, confirming root-directory placement and mixed-case long-filename preservation alongside `istat` entry `13`. While `ffind` maps metadata addresses to paths (and requires `-o` on partitioned disks), it does not validate underlying sector integrity. Overall, all laboratory objectives were achieved with full evidence preservation, and every recovered file was substantiated by repeatable command-line extraction and cryptographic verification.
 
 
 
-```bash
-
-istat Ch01InChap01.dd 13 | tee ../reports/08_income_istat.txt
-
-```
-
-
-
-* **Allocation State:** `Allocated` | **Name:** `INCOME.XLS` | **Size:** `13824` bytes (**Fig. 7**)
-
-* **Timestamps (EAT):** Written `2005-12-09 06:52:18` | Accessed `2005-12-09 00:00:00` | Created `2005-12-09 06:59:07`
-
-* **Data-Unit Sequence:** **27 contiguous sectors** running uninterrupted from sector `285` through `311` (`311 - 285 + 1 = 27`).
-
-
-
-### Three-Method Extraction
-
-
-
-1. **Method 1 — Metadata Extraction (`icat`):**
-
-   ```bash
-
-   icat Ch01InChap01.dd 13 > ../recovered/INCOME_icat.xls
-
-   stat -c "%n | %s bytes" ../recovered/INCOME_icat.xls
-
-   ```
-
-2. **Method 2 — Contiguous Sector Extraction & Exact-Byte Trimming (`blkcat` + `head`, Fig. 8):**
-
-   ```bash
-
-   blkcat Ch01InChap01.dd 285 27 > ../recovered/INCOME_blkcat_full.bin
-
-   head -c 13824 ../recovered/INCOME_blkcat_full.bin > ../recovered/INCOME_blkcat.xls
-
-   ls -l ../recovered/INCOME_blkcat.xls
-
-   file ../recovered/INCOME_blkcat.xls
-
-   ```
-
-   *Reconstruction Explanation:* Because `istat` confirmed a contiguous sequence from sector `285` to `311`, `blkcat` read 27 consecutive sectors (`27 x 512 = 13,824 bytes`), and `head -c 13824` enforced the exact byte length. Because `13,824` is an exact multiple of 512 bytes, there was zero end-of-sector slack at sector `311`.
-
-3. **Method 3 — Automated Filesystem Recovery (`tsk_recover`, Fig. 9):**
-
-   ```bash
-
-   mkdir -p ../recovered/tsk_output
-
-   tsk_recover -e Ch01InChap01.dd ../recovered/tsk_output
-
-   find ../recovered/tsk_output -iname '*income*' -type f -print
-
-   ```
-
-   *Evidence Path Retained:* `../recovered/tsk_output/Income.xls` (`13824` bytes; 6 files recovered total).
-
-
-
-### Three-Way Integrity & Content Comparison
-
-
-
-```bash
-
-sha256sum ../recovered/INCOME_icat.xls
-
-sha256sum ../recovered/INCOME_blkcat.xls
-
-cmp -s ../recovered/INCOME_icat.xls ../recovered/INCOME_blkcat.xls && echo 'MATCH' || echo 'DIFFER'
-
-file ../recovered/INCOME_icat.xls
-
-```
-
-
-
-| Method | Recovered Artifact Path | Size | SHA-256 Digest | Result |
-
-| :--- | :--- | :--- | :--- | :--- |
-
-| `icat` | `../recovered/INCOME_icat.xls` | `13,824 bytes` | `8d7cd7204d3dae161a8fa879e184865b3bc4a57a4e688abd522a9ff03f62252d` | Verified |
-
-| `blkcat` + `head` | `../recovered/INCOME_blkcat.xls` | `13,824 bytes` | `8d7cd7204d3dae161a8fa879e184865b3bc4a57a4e688abd522a9ff03f62252d` | `MATCH` |
-
-| `tsk_recover` | `../recovered/tsk_output/Income.xls` | `13,824 bytes` | Identical 13,824-byte root file (`Income.xls`) | Verified |
-
-
-
-* **Document Metadata (`file` output, Fig. 10):** `Composite Document File V2 Document, Little Endian, Os: Windows, Version 4.10, Code page: 1252, Author: Amelia Phillips, Last Saved By: Amelia Phillips, Name of Creating Application: Microsoft Excel, Create Time/Date: Sat Nov 23 03:17:08 2002, Last Saved Time/Date: Fri Dec 9 14:52:18 2005, Security: 0`.
-
-
-
----
-
-
-
-## 7. Independent TSK Command Investigation (`ffind`)
-
-
-
-* **Selected Command & Forensic Purpose:** `ffind` (The Sleuth Kit) maps a metadata/directory entry address back to its file name(s) and directory path(s) within the filesystem without modifying the image. It establishes file path hierarchy and detects multiple directory links to the same metadata structure.
-
-* **Inputs, Flags & Exact Command Line:**
-
-  * **Inputs:** Disk/filesystem image (`Ch01InChap01.dd`) and metadata address (`13`).
-
-  * **Optional Flags:** `-a` (show all entries including deleted), `-u` (undeleted entries only), `-f fstype` (specify filesystem type), `-o OFFSET` (partition byte offset if applicable).
-
-  * **Command Executed:**
-
-    ```bash
-
-    ffind Ch01InChap01.dd 13
-
-    ```
-
-* **Captured Output & Interpretation:**
-
-  * **Output:** `/Income.xls`
-
-  * **Interpretation:** Confirms that metadata entry `13` resides in the root directory (`/`) of `Ch01InChap01.dd` and illustrates FAT long-filename case preservation (`Income.xls`) compared to the uppercase 8.3 short name (`INCOME.XLS`) shown in `istat`.
-
-* **Limitations & Cross-Finding Support:**
-
-  * **Limitations:** Does not verify whether underlying sectors (`285–311`) hold uncorrupted file data or sector slack, returns incomplete/missing results if directory entries are overwritten, and requires `-o OFFSET` when inspecting partitioned disk images.
-
-  * **Cross-Finding Support:** Corroborates `istat` entry `13` (`Allocated`, `Size: 13824`, sectors `285–311`) and confirms why `tsk_recover` restored `Income.xls` at the root of `../recovered/tsk_output/`.
-
-
-
----
-
-
-
-## 8. Findings, Limitations, and Conclusion
-
-
-
-1. **Image Integrity & Structure:** `Ch01InChap01.dd` (`1,474,560` bytes) is an unpartitioned FAT12 volume matching the reference cryptographic hashes without modification.
-
-2. **Deleted File Recovery:** Four deleted root-directory entries were identified (`Billing Letter.doc`, `confirmation.txt`, `letter1.txt`, `Regrets.doc`). `letter1.txt` (entry `15`, sector `312`, `121` bytes) was recovered intact, with `xxd` confirming `391` bytes of zero slack padding in sector `312`.
-
-3. **Multi-Method Spreadsheet Recovery:** `INCOME.XLS` (entry `13`, sectors `285–311`, `13,824` bytes) was recovered identically via `icat`, `blkcat` + `head`, and `tsk_recover`, verified by matching SHA-256 hashes and OLE2 document headers.
-
-4. **Operational Limitations:** TSK metadata-based recovery depends on intact directory entries and unoverwritten clusters; heavily overwritten files require signature-based file carving, and FAT12 timestamps require timezone correlation against internal application metadata.
-
-
-
----
-
-
-
-## 9. References
-
-
-
-1. International Cybersecurity and Digital Forensics Academy (ICDFA). *CIP-B102 Practical Lab 02: The Sleuth Kit Command-Line Forensic Image Investigation*. Directorate of Training.
-
-2. Carrier, B. *The Sleuth Kit (TSK) v4.15.0 Command Reference*. https://www.sleuthkit.org/sleuthkit/man/
-
-3. Kali Linux Documentation. *sleuthkit Package Tracker & Tool Reference*. https://www.kali.org/tools/sleuthkit/
+![Fig. 11: ffind path resolution](screenshots/Fig_11_ffind_Output.png)
